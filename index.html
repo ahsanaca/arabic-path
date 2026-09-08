@@ -136,6 +136,7 @@
   .login-card p { font-size:13px; color:#7f8c8d; margin-bottom:18px; }
   .login-card input { margin-bottom:12px; }
   .login-error { color:#e74c3c; font-size:12.5px; min-height:16px; margin-bottom:6px; }
+  .login-info { color:#1e7e42; background:#d5f4e6; border-radius:6px; padding:8px 10px; font-size:12.5px; margin-bottom:10px; }
   .login-switch { font-size:13px; color:#555; margin-top:14px; }
   .login-switch a { color:#2980b9; cursor:pointer; font-weight:600; text-decoration:underline; }
   .login-card .action-btn { width:100%; margin-top:4px; }
@@ -246,7 +247,10 @@
   .vocab-category-h { font-size: 15px; color:#7f8c8d; margin: 22px 0 12px; padding-bottom:6px; border-bottom:1px dashed #ddd; }
   .vocab-category-h:first-child { margin-top:0; }
   .vocab-grid { display:grid; grid-template-columns: repeat(auto-fill, minmax(150px,1fr)); gap: 14px; }
-  .flip-card { perspective: 800px; height: 140px; cursor:pointer; }
+  .listen-icon-btn { position:absolute; top:8px; right:8px; z-index:3; background:#fff; border:1px solid #dcdde1; border-radius:50%; width:28px; height:28px; font-size:13px; line-height:1; cursor:pointer; box-shadow:0 1px 3px rgba(0,0,0,0.1); }
+  .listen-icon-btn:hover { background:#eaf4fb; }
+  .listen-icon-btn.inline { position:static; margin:0 4px; }
+  .flip-card { position:relative; perspective: 800px; height: 140px; cursor:pointer; }
   .flip-card-inner {
     position:relative; width:100%; height:100%; text-align:center;
     transition: transform .5s; transform-style: preserve-3d;
@@ -266,6 +270,13 @@
   .vocab-hint { text-align:center; font-size:12.5px; color:#95a5a6; margin-bottom:16px; }
 
   /* ===== EXERCISES ===== */
+  .free-banner { background:linear-gradient(135deg,#f4f9f4,#eef7ee); border:1px solid #d4ecd4; border-radius:10px; padding:16px 20px; margin-bottom:20px; text-align:center; }
+  .free-banner .fb-line1 { font-size:14px; color:#2c3e50; font-weight:600; margin-bottom:8px; }
+  .free-banner .fb-verse { font-size:22px; color:#27ae60; margin-bottom:2px; }
+  .free-banner .fb-verse-en { font-size:12.5px; color:#7f8c8d; font-style:italic; margin-bottom:8px; }
+  .free-banner .fb-line2 { font-size:12.5px; color:#555; }
+  .section-nav-footer { margin-top:28px; padding-top:20px; border-top:1px dashed #dcdde1; text-align:right; }
+  .section-nav-footer .action-btn { width:auto; padding:12px 24px; }
   .exercise-block { background:#f9f9f9; border-left:4px solid #e74c3c; border-radius:8px; padding:22px; margin-bottom:24px; }
   .exercise-block .ex-title { font-weight:700; color:#e74c3c; margin-bottom:14px; font-size:15px; }
   .q-item { background:white; border:1px solid #ecf0f1; border-radius:6px; padding:16px; margin-bottom:14px; }
@@ -283,6 +294,8 @@
   .click-opt.picked { border-color:#3498db; background:#eaf4fd; }
   .click-opt.correct { background:#d5f4e6; border-color:#27ae60; color:#1e7e42; font-weight:600; }
   .click-opt.incorrect { background:#fadbd8; border-color:#e74c3c; color:#a53125; }
+  .q-item.q-item-right { background:#f2fbf6; border-color:#27ae60; border-width:2px; }
+  .q-item.q-item-wrong { background:#fdf5f4; border-color:#e74c3c; border-width:2px; }
 
   .match-columns { display:flex; gap:16px; flex-wrap:wrap; }
   .match-col { flex:1; min-width:150px; display:flex; flex-direction:column; gap:8px; }
@@ -1864,11 +1877,11 @@ const chapters = [
 ===================================================================== */
 const firebaseConfig = {
   apiKey: "AIzaSyAIK6cqq4iF5ROr7mK6DelsFVijufx2DEQ",
-     authDomain: "arabic-path.firebaseapp.com",
-     projectId: "arabic-path",
-     storageBucket: "arabic-path.firebasestorage.app",
-     messagingSenderId: "28140703557",
-     appId: "1:28140703557:web:594d5d4211c32b30f1f82c"
+  authDomain: "arabic-path.firebaseapp.com",
+  projectId: "arabic-path",
+  storageBucket: "arabic-path.firebasestorage.app",
+  messagingSenderId: "28140703557",
+  appId: "1:28140703557:web:594d5d4211c32b30f1f82c"
 };
 
 function isFirebaseConfigured() {
@@ -1915,11 +1928,12 @@ function renderLoginScreen(mode) {
         <input type="email" id="loginEmail" placeholder="Email">
         <input type="password" id="loginPassword" placeholder="Password (6+ characters)">
         <div class="login-error" id="loginError"></div>
+        <div class="login-info" id="loginInfo" style="display:none;"></div>
         <button class="action-btn" onclick="submitAuth('${mode}')">${mode === 'signup' ? 'Create Account' : 'Sign In'}</button>
         <p class="login-switch">
           ${mode === 'signup'
             ? `Already have an account? <a onclick="renderLoginScreen('signin')">Sign in</a>`
-            : `New here? <a onclick="renderLoginScreen('signup')">Create an account</a>`}
+            : `New here? <a onclick="renderLoginScreen('signup')">Create an account</a> &nbsp;·&nbsp; <a onclick="submitForgotPassword()">Forgot password?</a>`}
         </p>
         <button class="action-btn secondary" onclick="skipLogin()">Continue without an account</button>
       </div>
@@ -1938,11 +1952,69 @@ function submitAuth(mode) {
   action.catch(e => { errEl.textContent = e.message; });
   // Success is handled by the onAuthStateChanged listener in initApp().
 }
+function submitForgotPassword() {
+  const errEl = document.getElementById('loginError');
+  const infoEl = document.getElementById('loginInfo');
+  errEl.textContent = ''; infoEl.style.display = 'none';
+  const email = document.getElementById('loginEmail').value.trim();
+  if (!email) { errEl.textContent = 'Enter your email above first, then tap "Forgot password?" again.'; return; }
+  if (!fbAuth) { errEl.textContent = 'Password reset needs the account system to be configured.'; return; }
+  fbAuth.sendPasswordResetEmail(email).then(() => {
+    infoEl.style.display = 'block';
+    infoEl.textContent = `📩 A password reset link has been sent to ${email}. Check your inbox (and spam folder).`;
+  }).catch(e => { errEl.textContent = e.message; });
+}
 function skipLogin() {
-  showDashboard();
+  enterApp();
 }
 function doSignOut() {
   if (fbAuth) fbAuth.signOut();
+}
+
+/* ---- One-time "improve your voice quality" tip screen, shown after
+   sign-in/skip, once per device (tracked separately from cloud progress
+   since it's a device setting, not account data). Reachable again anytime
+   via the "Voice Setup Tips" link on the dashboard. ---- */
+const VOICE_SETUP_KEY = "arabicAcademyVoiceSetupSeen";
+function hasSeenVoiceSetup() {
+  try { return localStorage.getItem(VOICE_SETUP_KEY) === '1'; } catch(e) { return false; }
+}
+function markVoiceSetupSeen() {
+  try { localStorage.setItem(VOICE_SETUP_KEY, '1'); } catch(e) {}
+}
+function enterApp() {
+  if (!hasSeenVoiceSetup()) renderVoiceSetupScreen();
+  else showDashboard();
+}
+function renderVoiceSetupScreen() {
+  currentView = 'voiceSetup';
+  root.innerHTML = `
+    <div class="dash-header">
+      <h1>🔊 Test Your Setup</h1>
+      <p>The app reads Arabic words and phrases aloud using your phone's own built-in voice. Most phones already have one, but a one-time setting makes it noticeably clearer. Takes about a minute, and only needs doing once per device — this doesn't block anything, so feel free to skip it and come back later.</p>
+    </div>
+    <div class="free-notice" style="margin-bottom:14px;">
+      <strong>📱 Android</strong>
+      <ol style="margin:8px 0 0 18px; padding:0; line-height:1.8;">
+        <li>Settings → Language &amp; input → Text-to-speech output</li>
+        <li>Set preferred engine to <strong>Google Text-to-speech Engine</strong></li>
+        <li>Tap its settings gear → Install voice data → Arabic → download the highest-quality option</li>
+      </ol>
+    </div>
+    <div class="free-notice" style="margin-bottom:18px;">
+      <strong>🍏 iPhone</strong>
+      <ol style="margin:8px 0 0 18px; padding:0; line-height:1.8;">
+        <li>Settings → Accessibility → Spoken Content → Voices</li>
+        <li>Find Arabic and download it</li>
+        <li>If offered, choose the <strong>Enhanced</strong> or <strong>Premium</strong> quality</li>
+      </ol>
+    </div>
+    <p style="font-size:13px;color:#7f8c8d;margin-bottom:18px;">Note: no phone currently offers a true UAE-dialect voice — you'll get Modern Standard or Saudi Arabic, just clearer. Once installed, tap any 🔊 button in a chapter to hear the difference.</p>
+    <div style="display:flex; gap:12px; flex-wrap:wrap;">
+      <button class="action-btn" onclick="markVoiceSetupSeen(); showDashboard();">Done — Continue to the App →</button>
+      <button class="action-btn secondary" onclick="showDashboard();">Skip for now — remind me next time</button>
+    </div>
+  `;
 }
 
 function initApp() {
@@ -1954,7 +2026,7 @@ function initApp() {
         currentUser = user;
         if (signOutBtn) signOutBtn.style.display = 'inline-block';
         await loadCloudProgress();
-        showDashboard();
+        enterApp();
       } else {
         currentUser = null;
         if (signOutBtn) signOutBtn.style.display = 'none';
@@ -1962,7 +2034,7 @@ function initApp() {
       }
     });
   } else {
-    showDashboard();
+    enterApp();
   }
 }
 
@@ -2247,6 +2319,20 @@ function selectTrack(trackId) {
   showDashboard();
 }
 
+function nextChapterInTrack() {
+  const list = chaptersInTrack();
+  const idx = list.findIndex(c => c.id === currentChapter.id);
+  if (idx === -1) return null;
+  for (let i = idx + 1; i < list.length; i++) {
+    if (!list[i].locked) return list[i];
+  }
+  return null;
+}
+function goToNextChapter() {
+  const next = nextChapterInTrack();
+  if (next) openChapter(next.id); else showDashboard();
+}
+
 function openChapter(id) {
   const ch = chapters.find(c => c.id === id);
   if (!ch || !isChapterAccessible(ch)) return;
@@ -2376,6 +2462,13 @@ function renderDashboard() {
       <h1>Your Arabic Journey</h1>
       <p>Tap a chapter to start. New chapters unlock as the course grows.</p>
     </div>
+    <div class="free-banner">
+      <div class="fb-line1">🌱 This app is free to use, and will stay free for as long as we can sustain the cost of running it.</div>
+      <div class="fb-verse arabic">رَبِّ زِدْنِي عِلْمًا</div>
+      <div class="fb-verse-en">"My Lord, increase me in knowledge" — Qur'an, Surah Ta-Ha 20:114</div>
+      <div class="fb-line2">Learning and sharing knowledge is its own reward — that's the spirit this project is built in. This project is for personal, non-commercial learning use only — please don't republish, resell, or redistribute it elsewhere.</div>
+      <div style="margin-top:8px;"><a style="color:#5b3fa6;cursor:pointer;font-size:13px;" onclick="renderVoiceSetupScreen()">🔊 Voice Setup Tips — improve pronunciation audio quality</a></div>
+    </div>
     <div class="track-banner">
       <span>${currentTrackDef.icon} Track: <strong>${currentTrackDef.title}</strong></span>
       <button onclick="showTrackSelector()">🔀 Switch Track</button>
@@ -2498,7 +2591,8 @@ function renderContentTab() {
       case 'p': html += `<p>${b.text}</p>`; break;
       case 'h': html += `<h3 class="block-h">${b.text}</h3>`; break;
       case 'wordcard':
-        html += `<div class="word-card">
+        html += `<div class="word-card" style="position:relative;">
+          <button class="listen-icon-btn" onclick="speakWord('${b.ar}', event)" title="Listen">🔊</button>
           <div class="wc-icon">${b.icon||''}</div>
           <div class="wc-ar arabic">${b.ar}</div>
           <div class="wc-translit">${b.translit}</div>
@@ -2517,6 +2611,7 @@ function renderContentTab() {
           <div class="example-row">
             <span class="ex-icon">${ex.icon||''}</span>
             <span class="ex-ar arabic">${ex.ar}</span>
+            <button class="listen-icon-btn inline" onclick="speakWord('${ex.ar}', event)" title="Listen">🔊</button>
             <span class="ex-translit">${ex.translit}</span>
             <span class="ex-meaning">${ex.meaning}</span>
           </div>`).join(''); break;
@@ -2524,6 +2619,9 @@ function renderContentTab() {
         html += `<div class="note-box">${b.html}</div>`; break;
     }
   });
+  html += `<div class="section-nav-footer">
+    <button class="action-btn" onclick="switchTab('vocab')">Continue to Vocabulary →</button>
+  </div>`;
   document.getElementById('panel-content').innerHTML = html;
 }
 
@@ -2536,6 +2634,7 @@ function renderVocabTab() {
     cat.words.forEach((w, i) => {
       html += `
         <div class="flip-card" onclick="this.classList.toggle('flipped')">
+          <button class="listen-icon-btn" onclick="speakWord('${w.ar}', event)" title="Listen">🔊</button>
           <div class="flip-card-inner">
             <div class="flip-face flip-front">
               <div class="fc-icon">${w.icon}</div>
@@ -2550,14 +2649,26 @@ function renderVocabTab() {
     });
     html += `</div>`;
   });
+  html += `<div class="section-nav-footer">
+    <button class="action-btn" onclick="switchTab('exercises')">Continue to Exercises →</button>
+  </div>`;
   document.getElementById('panel-vocab').innerHTML = html;
+}
+function chapterNavLabel() {
+  const next = nextChapterInTrack();
+  return next ? `Next Chapter: ${next.icon} ${next.label} →` : 'Back to Dashboard →';
 }
 
 /* ---- Exercises tab: dispatch by exercise type ---- */
 function renderExercisesTab() {
   const exs = currentChapter.exercises || [];
   const container = document.getElementById('panel-exercises');
-  container.innerHTML = exs.map(ex => renderExerciseBlock(ex)).join('');
+  const hasSpeaking = (currentChapter.speakingPhrases || []).length > 0;
+  const footerBtn = hasSpeaking
+    ? `<button class="action-btn" onclick="switchTab('speaking')">Continue to Speaking →</button>`
+    : `<button class="action-btn" onclick="goToNextChapter()">${chapterNavLabel()}</button>`;
+  container.innerHTML = exs.map(ex => renderExerciseBlock(ex)).join('')
+    + `<div class="section-nav-footer">${footerBtn}</div>`;
 }
 
 function renderExerciseBlock(ex) {
@@ -2608,6 +2719,8 @@ function scoreMCQ(exId, total) {
       if (oi === correct) o.classList.add('correct');
       else if (oi === picked) o.classList.add('incorrect');
     });
+    qEl.classList.remove('q-item-right','q-item-wrong');
+    qEl.classList.add(picked === correct ? 'q-item-right' : 'q-item-wrong');
     if (picked === correct) score++;
   }
   showScoreChip(exId, score, total);
@@ -2657,7 +2770,7 @@ function matchClick(exId, side, idx) {
 
 function renderTranslateItems(ex) {
   const rows = ex.items.map((it,i) => `
-    <div class="q-item">
+    <div class="q-item" id="${ex.id}-q${i}">
       <div class="q-icon-top">${it.icon||''}</div>
       <p class="q-text">Translate: <span class="arabic">${it.ar}</span></p>
       <input type="text" id="${ex.id}-in${i}" placeholder="Type your answer in English">
@@ -2669,10 +2782,12 @@ function scoreTranslate(exId, keywordSets) {
   let score = 0;
   keywordSets.forEach((keywords, i) => {
     const input = document.getElementById(`${exId}-in${i}`);
+    const qEl = document.getElementById(`${exId}-q${i}`);
     const val = input.value.trim().toLowerCase();
     const ok = keywords.some(k => val.includes(k));
     input.style.borderWidth = '2px';
     input.style.borderColor = ok ? '#27ae60' : '#e74c3c';
+    if (qEl) { qEl.classList.remove('q-item-right','q-item-wrong'); qEl.classList.add(ok ? 'q-item-right' : 'q-item-wrong'); }
     if (ok) score++;
   });
   showScoreChip(exId, score, keywordSets.length);
@@ -2683,7 +2798,7 @@ function renderSentenceItems(ex) {
     const shuffled = [...it.words].sort(() => Math.random()-0.5);
     const chips = shuffled.map(w => `<span class="word-chip" onclick="sentenceAdd('${ex.id}',${i},this,'${w.replace(/'/g,"\\'")}')">${w}</span>`).join('');
     return `
-      <div class="q-item">
+      <div class="q-item" id="${ex.id}-q${i}">
         <div class="sentence-slot" id="${ex.id}-slot${i}" data-answer='${JSON.stringify(it.answer)}'>
           <span class="placeholder">tap words below →</span>
         </div>
@@ -2718,6 +2833,8 @@ function scoreSentences(exId, total) {
     const ok = JSON.stringify(built) === JSON.stringify(answer);
     slot.style.borderColor = ok ? '#27ae60' : '#e74c3c';
     slot.style.borderStyle = 'solid';
+    const qEl = document.getElementById(`${exId}-q${i}`);
+    if (qEl) { qEl.classList.remove('q-item-right','q-item-wrong'); qEl.classList.add(ok ? 'q-item-right' : 'q-item-wrong'); }
     if (ok) score++;
   }
   showScoreChip(exId, score, total);
@@ -2773,7 +2890,10 @@ function renderSpeakingTab() {
   const phrases = currentChapter.speakingPhrases || [];
   const panel = document.getElementById('panel-speaking');
   if (!phrases.length) {
-    panel.innerHTML = `<p style="color:#7f8c8d;">No speaking phrases for this chapter yet.</p>`;
+    panel.innerHTML = `<p style="color:#7f8c8d;">No speaking phrases for this chapter yet.</p>
+      <div class="section-nav-footer">
+        <button class="action-btn" onclick="goToNextChapter()">${chapterNavLabel()}</button>
+      </div>`;
     return;
   }
   panel.innerHTML = `
@@ -2797,6 +2917,9 @@ function renderSpeakingTab() {
       <div class="heard" id="heardText">—</div>
       <div class="similarity-bar"><div class="similarity-fill" id="similarityFill" style="width:0%;background:#bdc3c7;"></div></div>
       <div class="speak-verdict" id="speakVerdict"></div>
+    </div>
+    <div class="section-nav-footer">
+      <button class="action-btn" onclick="goToNextChapter()">${chapterNavLabel()}</button>
     </div>
   `;
   renderSpeakPhrase();
@@ -2840,19 +2963,21 @@ function pickArabicVoice() {
   }
   return availableVoices.find(v => v.lang && v.lang.toLowerCase().startsWith('ar')) || null;
 }
-function listenToTarget() {
-  const p = currentChapter.speakingPhrases[speakIndex];
-  const statusEl = document.getElementById('voiceStatus');
-  statusEl.textContent = '';
-  if (!('speechSynthesis' in window)) { statusEl.textContent = "⚠️ This browser doesn't support text-to-speech."; return; }
+// Generic Arabic TTS — used by the Speaking tab, and by the small 🔊 Listen
+// buttons on vocabulary cards and course-content word cards/examples.
+// statusElId is optional; when given, playback status text is written there.
+function speakArabicText(text, statusElId) {
+  const statusEl = statusElId ? document.getElementById(statusElId) : null;
+  if (statusEl) statusEl.textContent = '';
+  if (!('speechSynthesis' in window)) { if (statusEl) statusEl.textContent = "⚠️ This browser doesn't support text-to-speech."; return; }
   const speakNow = () => {
     const voice = pickArabicVoice();
-    const utter = new SpeechSynthesisUtterance(p.plain);
+    const utter = new SpeechSynthesisUtterance(text);
     utter.rate = 0.85;
     if (voice) {
       utter.voice = voice;
       utter.lang = voice.lang;
-      utter.onstart = () => {
+      if (statusEl) utter.onstart = () => {
         const dialectNote = voice.lang === 'ar-AE' ? ' — UAE dialect'
           : voice.lang === 'ar-SA' ? ' — Saudi/generic Arabic (your device may not have a UAE voice installed)'
           : ` — ${voice.lang}`;
@@ -2860,13 +2985,23 @@ function listenToTarget() {
       };
     } else {
       utter.lang = 'ar-AE';
-      statusEl.textContent = "⚠️ No Arabic voice found on this device — playing with the default voice.";
+      if (statusEl) statusEl.textContent = "⚠️ No Arabic voice found on this device — playing with the default voice.";
     }
-    utter.onerror = () => statusEl.textContent = "⚠️ Playback failed — try clicking Listen again.";
+    if (statusEl) utter.onerror = () => statusEl.textContent = "⚠️ Playback failed — try clicking Listen again.";
     window.speechSynthesis.speak(utter);
   };
   window.speechSynthesis.cancel();
   setTimeout(speakNow, 60);
+}
+function listenToTarget() {
+  const p = currentChapter.speakingPhrases[speakIndex];
+  speakArabicText(p.plain, 'voiceStatus');
+}
+// Stops event bubbling so a 🔊 button inside a clickable flip-card doesn't
+// also trigger the card's own flip/click handler.
+function speakWord(text, evt) {
+  if (evt) evt.stopPropagation();
+  speakArabicText(text);
 }
 function startRecording() {
   const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
