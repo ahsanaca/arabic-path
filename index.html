@@ -395,7 +395,7 @@
 
 <div class="page" id="pageRoot"></div>
 
-<footer>Arabic Academy · template &amp; content engine prototype · original content, built for a self-paced learning app</footer>
+<footer>Arabic Academy · template &amp; content engine prototype · original content, built for a self-paced learning app<br>Spotted a typo, a grammar mistake, or anything that looks wrong? Please let us know and we'll check it and get it fixed.</footer>
 
 <script>
 /* =====================================================================
@@ -412,8 +412,20 @@ const units = [
   { id:"u3", track:"classical", title:"Unit 3 — Possession & Pronouns", desc:"Idafah and attached pronouns." },
   { id:"u4", track:"classical", title:"Unit 4 — Describing the World", desc:"Plurals, adjectives, colors, and prepositions of place." },
   { id:"u5", track:"classical", title:"Unit 5 — Your First Verbs", desc:"Moving from description into action." },
+  { id:"u6", track:"classical", title:"Unit 6 — Talking About People", desc:"Nominal sentences with pronouns, professions, and the nisba adjective." },
+  { id:"u7", track:"classical", title:"Unit 7 — Dual Number", desc:"Talking about exactly two of something — a distinctive Arabic feature." },
+  { id:"u8", track:"classical", title:"Unit 8 — Past Tense Verbs", desc:"Talking about what already happened." },
+  { id:"u9", track:"classical", title:"Unit 9 — Negation & Questions", desc:"Saying no, and asking who, what, where, when, how, and why." },
+  { id:"u10", track:"classical", title:"Unit 10 — Numbers & Comparison", desc:"Counting from one to ten, simple math, and comparing things with the أَفْعَل pattern." },
+  { id:"u11", track:"classical", title:"Unit 11 — Coming Soon", desc:"More classical grammar chapters are on the way." },
   { id:"s-u1", track:"spoken", title:"Unit 1 — Everyday Greetings", desc:"How people actually talk, day to day (Emirati/Gulf Arabic)." },
-  { id:"s-u2", track:"spoken", title:"Unit 2 — Shopping & Numbers", desc:"Counting and haggling — practical daily-life phrases." }
+  { id:"s-u2", track:"spoken", title:"Unit 2 — Shopping & Numbers", desc:"Counting and haggling — practical daily-life phrases." },
+  { id:"s-u3", track:"spoken", title:"Unit 3 — Getting Around", desc:"Asking for and understanding directions around town." },
+  { id:"s-u4", track:"spoken", title:"Unit 4 — Food & Everyday Talk", desc:"Ordering food and making small talk about family." },
+  { id:"s-u5", track:"spoken", title:"Unit 5 — Time & Daily Life", desc:"Telling time, days of the week, and talking about your day." },
+  { id:"s-u6", track:"spoken", title:"Unit 6 — Transport & Emergencies", desc:"Taking a taxi, and knowing what to say if something goes wrong." },
+  { id:"s-u7", track:"spoken", title:"Unit 7 — Work & Home Life", desc:"Talk about your job and daily life at home in Gulf Arabic." },
+  { id:"s-u8", track:"spoken", title:"Unit 8 — Coming Soon", desc:"More everyday Gulf Arabic phrases are on the way." }
 ];
 
 const tracks = [
@@ -1435,7 +1447,7 @@ const chapters = [
       { type:"h", text:"Common Prepositions" },
       { type:"examples", items:[
         { icon:"📦", ar:"فِي", translit:"fii", meaning:"in" },
-        { icon:"⬆️", ar:"عَلَى", translit:"3alaa", meaning:"on" },
+        { icon:"⬆️", ar:"عَلَى", translit:"'alaa", meaning:"on" },
         { icon:"⬇️", ar:"تَحْتَ", translit:"tahta", meaning:"under" },
         { icon:"↔️", ar:"أَمَامَ", translit:"amaama", meaning:"in front of" },
         { icon:"🔙", ar:"خَلْفَ", translit:"khalfa", meaning:"behind" }
@@ -1443,7 +1455,7 @@ const chapters = [
       { type:"h", text:"Putting It Together" },
       { type:"examples", items:[
         { icon:"❓", ar:"أَيْنَ الكِتَابُ؟", translit:"ayna al-kitaabu?", meaning:"Where is the book?" },
-        { icon:"📖⬆️", ar:"الكِتَابُ عَلَى الطَّاوِلَةِ", translit:"al-kitaabu 3alaa al-taawilati", meaning:"The book is on the table" },
+        { icon:"📖⬆️", ar:"الكِتَابُ عَلَى الطَّاوِلَةِ", translit:"al-kitaabu 'alaa al-taawilati", meaning:"The book is on the table" },
         { icon:"🖊️📦", ar:"القَلَمُ فِي البَيْتِ", translit:"al-qalamu fii al-bayti", meaning:"The pen is in the house" },
         { icon:"⚽⬇️", ar:"الكُرَةُ تَحْتَ الكُرْسِيِّ", translit:"al-kuratu tahta al-kursiyyi", meaning:"The ball is under the chair" }
       ]},
@@ -1453,7 +1465,7 @@ const chapters = [
     vocabCategories: [
       { name:"Prepositions", words:[
         {icon:"📦", ar:"فِي", translit:"fii", en:"In"},
-        {icon:"⬆️", ar:"عَلَى", translit:"3alaa", en:"On"},
+        {icon:"⬆️", ar:"عَلَى", translit:"'alaa", en:"On"},
         {icon:"⬇️", ar:"تَحْتَ", translit:"tahta", en:"Under"},
         {icon:"↔️", ar:"أَمَامَ", translit:"amaama", en:"In front of"},
         {icon:"🔙", ar:"خَلْفَ", translit:"khalfa", en:"Behind"}
@@ -1513,7 +1525,7 @@ const chapters = [
 
     speakingPhrases: [
       { icon:"❓", ar:"أَيْنَ الكِتَابُ؟", plain:"أين الكتاب", translit:"ayna al-kitaabu?", meaning:"\"Where is the book?\"" },
-      { icon:"📖⬆️", ar:"الكِتَابُ عَلَى الطَّاوِلَةِ", plain:"الكتاب على الطاولة", translit:"al-kitaabu 3alaa al-taawilati", meaning:"\"The book is on the table\"" },
+      { icon:"📖⬆️", ar:"الكِتَابُ عَلَى الطَّاوِلَةِ", plain:"الكتاب على الطاولة", translit:"al-kitaabu 'alaa al-taawilati", meaning:"\"The book is on the table\"" },
       { icon:"⚽⬇️", ar:"الكُرَةُ تَحْتَ الكُرْسِيِّ", plain:"الكرة تحت الكرسي", translit:"al-kuratu tahta al-kursiyyi", meaning:"\"The ball is under the chair\"" }
     ]
   },
@@ -1555,7 +1567,1478 @@ const chapters = [
     ]
   },
 
-  { id:13, unit:"u5", label:"Chapter 9", difficulty:8, requires:12, icon:"🏃", title:"Present-Tense Verbs (Intro)", arabicTitle:"الفِعْل المُضَارِع", desc:"Coming soon — your first verbs.", locked:true },
+  {
+    id: 13,
+    unit: "u5",
+    label: "Chapter 9",
+    difficulty: 8,
+    requires: 12,
+    icon: "🏃",
+    title: "Present-Tense Verbs (Intro)",
+    arabicTitle: "الفِعْل المُضَارِع",
+    desc: "Your first verbs — saying \"I go,\" \"he writes,\" \"she reads.\"",
+    locked: false,
+
+    content: [
+      { type:"p", text:"Every Arabic verb has three time-forms: الماضي (the past — \"he went\"), المضارع (the present/future — \"he goes / will go\"), and الأَمْر (the command — \"go!\"). This chapter introduces المضارع, the present tense — the one you'll use most in everyday sentences." },
+      { type:"h", text:"The Four Letters of المضارع" },
+      { type:"p", text:"Every present-tense verb starts with one of exactly four letters, depending on who's doing the action: أ ، ن ، ي ، ت — remembered together as the word أَنَيْتُ (\"anaytu\")." },
+      { type:"note", html:"<strong>أ</strong> for أَنَا (I) &nbsp;·&nbsp; <strong>نـ</strong> for نَحْنُ (we) &nbsp;·&nbsp; <strong>يـ</strong> for هُوَ (he) &nbsp;·&nbsp; <strong>تـ</strong> for هِيَ (she). This chapter sticks to these four persons — أَنْتَ (you) and the rest join in a later chapter, once these four feel automatic." },
+      { type:"h", text:"Conjugating ذَهَبَ (to go)" },
+      { type:"examples", items:[
+        { icon:"🧍", ar:"أَنَا أَذْهَبُ", translit:"anaa adh-habu", meaning:"I go" },
+        { icon:"👥", ar:"نَحْنُ نَذْهَبُ", translit:"nahnu nadh-habu", meaning:"we go" },
+        { icon:"🧑", ar:"هُوَ يَذْهَبُ", translit:"huwa yadh-habu", meaning:"he goes" },
+        { icon:"👩", ar:"هِيَ تَذْهَبُ", translit:"hiya tadh-habu", meaning:"she goes" }
+      ]},
+      { type:"pattern", ar:"أ / نـ / يـ / تـ + جِذْر الفِعْل", translit:"prefix + verb root", desc:"Notice the root ذهب stays exactly the same in every form — only the prefix at the front changes to match who's doing the action." },
+      { type:"h", text:"Same Pattern, Different Verbs" },
+      { type:"examples", items:[
+        { icon:"✍️", ar:"أَنَا أَكْتُبُ", translit:"anaa aktubu", meaning:"I write" },
+        { icon:"✍️", ar:"هُوَ يَكْتُبُ", translit:"huwa yaktubu", meaning:"he writes" },
+        { icon:"📖", ar:"أَنَا أَقْرَأُ", translit:"anaa aqra'u", meaning:"I read" },
+        { icon:"📖", ar:"هِيَ تَقْرَأُ", translit:"hiya taqra'u", meaning:"she reads" }
+      ]},
+      { type:"h", text:"Putting It in a Sentence" },
+      { type:"wordcard", icon:"🏫", ar:"مَدْرَسَةٌ", translit:"madrasatun", meaning:"a school" },
+      { type:"wordcard", icon:"➡️", ar:"إِلَى", translit:"ilaa", meaning:"to / towards" },
+      { type:"examples", items:[
+        { icon:"🏫", ar:"أَنَا أَذْهَبُ إِلَى المَدْرَسَةِ", translit:"anaa adh-habu ilaa al-madrasati", meaning:"I go to school" },
+        { icon:"📖🏠", ar:"هِيَ تَقْرَأُ فِي البَيْتِ", translit:"hiya taqra'u fii al-bayti", meaning:"She reads in the house" }
+      ]},
+      { type:"note", html:"Notice هِيَ (she) and أَنْتَ (you, masc.) actually share the same تـ prefix in full Classical Arabic — they're told apart by the ending, which is a topic for a later chapter. For now, every تـ verb you see here means \"she.\"" }
+    ],
+
+    vocabCategories: [
+      { name:"Verb: ذهب (to go)", words:[
+        {icon:"🧍", ar:"أَذْهَبُ", translit:"adh-habu", en:"I go"},
+        {icon:"👥", ar:"نَذْهَبُ", translit:"nadh-habu", en:"We go"},
+        {icon:"🧑", ar:"يَذْهَبُ", translit:"yadh-habu", en:"He goes"},
+        {icon:"👩", ar:"تَذْهَبُ", translit:"tadh-habu", en:"She goes"}
+      ]},
+      { name:"Verb: كتب (to write) & قرأ (to read)", words:[
+        {icon:"✍️", ar:"أَكْتُبُ", translit:"aktubu", en:"I write"},
+        {icon:"✍️", ar:"يَكْتُبُ", translit:"yaktubu", en:"He writes"},
+        {icon:"📖", ar:"أَقْرَأُ", translit:"aqra'u", en:"I read"},
+        {icon:"📖", ar:"تَقْرَأُ", translit:"taqra'u", en:"She reads"}
+      ]},
+      { name:"New Vocabulary", words:[
+        {icon:"🏫", ar:"مَدْرَسَةٌ", translit:"madrasatun", en:"A school"},
+        {icon:"➡️", ar:"إِلَى", translit:"ilaa", en:"To / towards"}
+      ]}
+    ],
+
+    exercises: [
+      {
+        id:"ch9-ex1", type:"mcq", title:"Exercise 1 — Pick the Right Prefix",
+        instructions:"Choose the correctly conjugated verb for the subject given.",
+        items:[
+          { icon:"🧍", promptText:"أَنَا ___ إِلَى المَدْرَسَةِ (go)", options:["أَذْهَبُ","يَذْهَبُ","نَذْهَبُ"], correct:0 },
+          { icon:"🧑", promptText:"هُوَ ___ رِسَالَةً (writes a letter)", options:["أَكْتُبُ","تَكْتُبُ","يَكْتُبُ"], correct:2 },
+          { icon:"👩", promptText:"هِيَ ___ كِتَابًا (reads a book)", options:["أَقْرَأُ","تَقْرَأُ","يَقْرَأُ"], correct:1 },
+          { icon:"👥", promptText:"نَحْنُ ___ إِلَى البَيْتِ (go)", options:["يَذْهَبُ","نَذْهَبُ","أَذْهَبُ"], correct:1 },
+          { promptText:"Which four letters start every مضارع verb?", options:["ب ت ن م","أ ن ي ت","ك ت ب س"], correct:1 }
+        ]
+      },
+      {
+        id:"ch9-ex2", type:"matching", title:"Exercise 2 — Click to Match",
+        instructions:"Tap a verb form, then tap its meaning.",
+        pairs:[
+          { left:"أَذْهَبُ", right:"I go" },
+          { left:"يَكْتُبُ", right:"He writes" },
+          { left:"تَقْرَأُ", right:"She reads" },
+          { left:"نَذْهَبُ", right:"We go" }
+        ]
+      },
+      {
+        id:"ch9-ex3", type:"translate", title:"Exercise 3 — Translate to English",
+        instructions:"Type the English meaning of each sentence.",
+        items:[
+          { icon:"🏫", ar:"أَنَا أَذْهَبُ إِلَى المَدْرَسَةِ", keywords:["go","school"] },
+          { icon:"📖🏠", ar:"هِيَ تَقْرَأُ فِي البَيْتِ", keywords:["reads","house"] },
+          { icon:"✍️", ar:"هُوَ يَكْتُبُ", keywords:["writes","write"] }
+        ]
+      },
+      {
+        id:"ch9-ex4", type:"sentence", title:"Exercise 4 — Build the Sentence",
+        instructions:"Tap the word chips in the correct order.",
+        items:[
+          { words:["المَدْرَسَةِ","إِلَى","أَذْهَبُ","أَنَا"], answer:["أَنَا","أَذْهَبُ","إِلَى","المَدْرَسَةِ"] },
+          { words:["فِي البَيْتِ","تَقْرَأُ","هِيَ"], answer:["هِيَ","تَقْرَأُ","فِي البَيْتِ"] }
+        ]
+      },
+      {
+        id:"ch9-ex5", type:"creative", title:"Exercise 5 — Create Your Own",
+        instructions:"Open-ended — no single right answer.",
+        items:[
+          { prompt:"Conjugate ذهب, كتب, and قرأ for أنا, هو, هي, and نحن — write out all four forms of each." },
+          { prompt:"Write two original sentences using أَذْهَبُ إِلَى... (\"I go to...\") with different places." }
+        ]
+      }
+    ],
+
+    speakingPhrases: [
+      { icon:"🏫", ar:"أَنَا أَذْهَبُ إِلَى المَدْرَسَةِ", plain:"أنا أذهب إلى المدرسة", translit:"anaa adh-habu ilaa al-madrasati", meaning:"\"I go to school\"" },
+      { icon:"📖🏠", ar:"هِيَ تَقْرَأُ فِي البَيْتِ", plain:"هي تقرأ في البيت", translit:"hiya taqra'u fii al-bayti", meaning:"\"She reads in the house\"" },
+      { icon:"✍️", ar:"هُوَ يَكْتُبُ", plain:"هو يكتب", translit:"huwa yaktubu", meaning:"\"He writes\"" },
+      { icon:"👥", ar:"نَحْنُ نَذْهَبُ", plain:"نحن نذهب", translit:"nahnu nadh-habu", meaning:"\"We go\"" }
+    ]
+  },
+
+  {
+    id: 14,
+    unit: "u5",
+    label: "Chapter 10",
+    difficulty: 8,
+    requires: 13,
+    icon: "🗣️",
+    title: "Present Tense: Talking to Someone",
+    arabicTitle: "المُخَاطَب فِي المُضَارِع",
+    desc: "Add \"you\" (masculine and feminine) to the present tense, and untangle the أَنْتَ/هِيَ look-alike from last chapter.",
+    locked: false,
+
+    content: [
+      { type:"p", text:"Chapter 9 covered أَنَا، نَحْنُ، هُوَ، and هِيَ. Now we add the two forms for \"you\": أَنْتَ (to a man) and أَنْتِ (to a woman)." },
+      { type:"h", text:"أَنْتَ (you, to a man) — same shape as هِيَ" },
+      { type:"examples", items:[
+        { icon:"🧍", ar:"أَنْتَ تَذْهَبُ", translit:"anta tadh-habu", meaning:"you (m.) go" },
+        { icon:"✍️", ar:"أَنْتَ تَكْتُبُ", translit:"anta taktubu", meaning:"you (m.) write" }
+      ]},
+      { type:"note", html:"Notice these are <strong>exactly</strong> the same words as هِيَ تَذْهَبُ (\"she goes\") and هِيَ تَكْتُبُ (\"she writes\"). In real sentences, context or the pronoun itself (أَنْتَ vs. هِيَ) tells you which one is meant — the verb form alone doesn't change." },
+      { type:"h", text:"أَنْتِ (you, to a woman) — the ـِينَ ending" },
+      { type:"examples", items:[
+        { icon:"👩", ar:"أَنْتِ تَذْهَبِينَ", translit:"anti tadh-habeena", meaning:"you (f.) go" },
+        { icon:"✍️", ar:"أَنْتِ تَكْتُبِينَ", translit:"anti taktubeena", meaning:"you (f.) write" }
+      ]},
+      { type:"pattern", ar:"تَـ + جِذْر الفِعْل + ـِينَ", translit:"ta- + root + -eena", desc:"Unlike \"you (m.)\" and \"she,\" which look identical, \"you (f.)\" always has this extra ـِينَ ending attached — it's never ambiguous." },
+      { type:"h", text:"All Six Forms So Far" },
+      { type:"examples", items:[
+        { icon:"🧍", ar:"أَنَا أَذْهَبُ", translit:"anaa adh-habu", meaning:"I go" },
+        { icon:"🧑", ar:"أَنْتَ تَذْهَبُ", translit:"anta tadh-habu", meaning:"you (m.) go" },
+        { icon:"👩", ar:"أَنْتِ تَذْهَبِينَ", translit:"anti tadh-habeena", meaning:"you (f.) go" },
+        { icon:"🧑", ar:"هُوَ يَذْهَبُ", translit:"huwa yadh-habu", meaning:"he goes" },
+        { icon:"👩", ar:"هِيَ تَذْهَبُ", translit:"hiya tadh-habu", meaning:"she goes" },
+        { icon:"👥", ar:"نَحْنُ نَذْهَبُ", translit:"nahnu nadh-habu", meaning:"we go" }
+      ]},
+      { type:"wordcard", icon:"📓", ar:"دَرْسٌ", translit:"darsun", meaning:"a lesson" }
+    ],
+
+    vocabCategories: [
+      { name:"Present Tense: You", words:[
+        {icon:"🧑", ar:"تَذْهَبُ", translit:"tadh-habu", en:"You (m.) go"},
+        {icon:"👩", ar:"تَذْهَبِينَ", translit:"tadh-habeena", en:"You (f.) go"},
+        {icon:"🧑", ar:"تَكْتُبُ", translit:"taktubu", en:"You (m.) write"},
+        {icon:"👩", ar:"تَكْتُبِينَ", translit:"taktubeena", en:"You (f.) write"}
+      ]},
+      { name:"New Vocabulary", words:[
+        {icon:"📓", ar:"دَرْسٌ", translit:"darsun", en:"A lesson"}
+      ]}
+    ],
+
+    exercises: [
+      {
+        id:"ch10-ex1", type:"mcq", title:"Exercise 1 — Pick the Right Form",
+        instructions:"Choose the correctly conjugated verb for the subject given.",
+        items:[
+          { icon:"🧑", promptText:"أَنْتَ ___ الدَّرْسَ (you, m., write the lesson)", options:["تَكْتُبُ","تَكْتُبِينَ","أَكْتُبُ"], correct:0 },
+          { icon:"👩", promptText:"أَنْتِ ___ إِلَى المَدْرَسَةِ (you, f., go)", options:["تَذْهَبُ","تَذْهَبِينَ","يَذْهَبُ"], correct:1 },
+          { promptText:"Which ending marks \"you, feminine\"?", options:["ـُونَ","ـِينَ","ـَانِ"], correct:1 },
+          { icon:"👩", promptText:"أَنْتِ ___ الدَّرْسَ (you, f., read the lesson)", options:["تَقْرَئِينَ","تَقْرَأُ","أَقْرَأُ"], correct:0 }
+        ]
+      },
+      {
+        id:"ch10-ex2", type:"matching", title:"Exercise 2 — Click to Match",
+        instructions:"Tap a verb form, then tap its meaning.",
+        pairs:[
+          { left:"تَذْهَبُ", right:"You (m.) go / She goes" },
+          { left:"تَذْهَبِينَ", right:"You (f.) go" },
+          { left:"تَكْتُبِينَ", right:"You (f.) write" },
+          { left:"دَرْسٌ", right:"A lesson" }
+        ]
+      },
+      {
+        id:"ch10-ex3", type:"translate", title:"Exercise 3 — Translate to English",
+        instructions:"Type the English meaning of each sentence.",
+        items:[
+          { icon:"🧑", ar:"أَنْتَ تَذْهَبُ إِلَى المَدْرَسَةِ", keywords:["you","go","school"] },
+          { icon:"👩", ar:"أَنْتِ تَكْتُبِينَ الدَّرْسَ", keywords:["you","write","lesson"] },
+          { icon:"📓", ar:"هَذَا دَرْسٌ", keywords:["this","lesson"] }
+        ]
+      },
+      {
+        id:"ch10-ex4", type:"sentence", title:"Exercise 4 — Build the Sentence",
+        instructions:"Tap the word chips in the correct order.",
+        items:[
+          { words:["الدَّرْسَ","تَكْتُبِينَ","أَنْتِ"], answer:["أَنْتِ","تَكْتُبِينَ","الدَّرْسَ"] },
+          { words:["المَدْرَسَةِ","إِلَى","تَذْهَبُ","أَنْتَ"], answer:["أَنْتَ","تَذْهَبُ","إِلَى","المَدْرَسَةِ"] }
+        ]
+      },
+      {
+        id:"ch10-ex5", type:"creative", title:"Exercise 5 — Create Your Own",
+        instructions:"Open-ended — no single right answer.",
+        items:[
+          { prompt:"Write one sentence to a man (أنتَ) and one to a woman (أنتِ), using ذهب or كتب." },
+          { prompt:"List all six present-tense forms of قرأ that you know how to build so far (أنا/أنتَ/أنتِ/هو/هي/نحن)." }
+        ]
+      }
+    ],
+
+    speakingPhrases: [
+      { icon:"🧑", ar:"أَنْتَ تَذْهَبُ إِلَى المَدْرَسَةِ", plain:"أنت تذهب إلى المدرسة", translit:"anta tadh-habu ilaa al-madrasati", meaning:"\"You (m.) go to school\"" },
+      { icon:"👩", ar:"أَنْتِ تَكْتُبِينَ الدَّرْسَ", plain:"أنتِ تكتبين الدرس", translit:"anti taktubeena ad-darsa", meaning:"\"You (f.) write the lesson\"" },
+      { icon:"👩", ar:"أَنْتِ تَقْرَئِينَ", plain:"أنتِ تقرئين", translit:"anti taqra'eena", meaning:"\"You (f.) read\"" }
+    ]
+  },
+
+  {
+    id: 15,
+    unit: "u5",
+    label: "Chapter 11",
+    difficulty: 8,
+    requires: 14,
+    icon: "❓",
+    title: "Saying No & Asking Yes/No Questions",
+    arabicTitle: "النَّفْي وَحَرْف الاسْتِفْهَام",
+    desc: "Negate a present-tense verb with لا, and ask a yes/no question with هَلْ.",
+    locked: false,
+
+    content: [
+      { type:"p", text:"Two small words unlock a lot of everyday sentences: لَا (no / not) placed before a present-tense verb negates it, and هَلْ placed at the very start of a sentence turns it into a yes/no question." },
+      { type:"h", text:"Negation with لَا" },
+      { type:"examples", items:[
+        { icon:"🚫", ar:"لَا أَذْهَبُ", translit:"laa adh-habu", meaning:"I don't go" },
+        { icon:"🚫", ar:"لَا يَكْتُبُ", translit:"laa yaktubu", meaning:"he doesn't write" },
+        { icon:"🚫", ar:"لَا تَقْرَئِينَ", translit:"laa taqra'eena", meaning:"you (f.) don't read" }
+      ]},
+      { type:"pattern", ar:"لَا + الفِعْل المُضَارِع", translit:"laa + present-tense verb", desc:"The verb itself keeps its normal form — لَا simply sits in front of it." },
+      { type:"h", text:"Yes/No Questions with هَلْ" },
+      { type:"examples", items:[
+        { icon:"❓", ar:"هَلْ تَذْهَبُ إِلَى المَدْرَسَةِ؟", translit:"hal tadh-habu ilaa al-madrasati?", meaning:"Do you go to school?" },
+        { icon:"❓", ar:"هَلْ هُوَ يَكْتُبُ؟", translit:"hal huwa yaktubu?", meaning:"Is he writing?" }
+      ]},
+      { type:"h", text:"Answering: نَعَمْ / لَا" },
+      { type:"examples", items:[
+        { icon:"✅", ar:"نَعَمْ، أَذْهَبُ", translit:"na'am, adh-habu", meaning:"Yes, I go" },
+        { icon:"🚫", ar:"لَا، لَا أَذْهَبُ", translit:"laa, laa adh-habu", meaning:"No, I don't go" }
+      ]},
+      { type:"note", html:"That second example has لَا twice in a row for a reason: the first لَا is the answer word \"no,\" and the second لَا is the same word negating the verb — they're identical in spelling, just doing two different jobs." }
+    ],
+
+    vocabCategories: [
+      { name:"Negation & Questions", words:[
+        {icon:"🚫", ar:"لَا", translit:"laa", en:"No / not"},
+        {icon:"❓", ar:"هَلْ", translit:"hal", en:"(question particle)"},
+        {icon:"✅", ar:"نَعَمْ", translit:"na'am", en:"Yes"}
+      ]},
+      { name:"Practice Sentences", words:[
+        {icon:"🚫", ar:"لَا أَذْهَبُ", translit:"laa adh-habu", en:"I don't go"},
+        {icon:"❓", ar:"هَلْ تَذْهَبُ؟", translit:"hal tadh-habu?", en:"Do you go?"}
+      ]}
+    ],
+
+    exercises: [
+      {
+        id:"ch11-ex1", type:"mcq", title:"Exercise 1 — Negate or Question",
+        instructions:"Choose the correct word for the blank.",
+        items:[
+          { promptText:"___ أَذْهَبُ إِلَى المَدْرَسَةِ (I don't go)", options:["هَلْ","لَا","نَعَمْ"], correct:1 },
+          { promptText:"___ تَكْتُبُ الدَّرْسَ؟ (Are you writing the lesson?)", options:["هَلْ","لَا","نَعَمْ"], correct:0 },
+          { promptText:"How do you answer \"yes\"?", options:["لَا","هَلْ","نَعَمْ"], correct:2 },
+          { promptText:"هَلْ هِيَ تَقْرَأُ؟ means...", options:["She reads.","Is she reading?","She doesn't read."], correct:1 }
+        ]
+      },
+      {
+        id:"ch11-ex2", type:"matching", title:"Exercise 2 — Click to Match",
+        instructions:"Tap a phrase, then tap its meaning.",
+        pairs:[
+          { left:"لَا أَذْهَبُ", right:"I don't go" },
+          { left:"هَلْ تَكْتُبُ؟", right:"Are you writing?" },
+          { left:"نَعَمْ", right:"Yes" }
+        ]
+      },
+      {
+        id:"ch11-ex3", type:"translate", title:"Exercise 3 — Translate to English",
+        instructions:"Type the English meaning of each sentence.",
+        items:[
+          { icon:"❓", ar:"هَلْ تَذْهَبُ إِلَى المَدْرَسَةِ؟", keywords:["do","go","school"] },
+          { icon:"🚫", ar:"لَا يَكْتُبُ", keywords:["doesn't","write"] },
+          { icon:"✅", ar:"نَعَمْ، أَذْهَبُ", keywords:["yes","go"] }
+        ]
+      },
+      {
+        id:"ch11-ex4", type:"sentence", title:"Exercise 4 — Build the Sentence",
+        instructions:"Tap the word chips in the correct order.",
+        items:[
+          { words:["إِلَى المَدْرَسَةِ","تَذْهَبُ","هَلْ"], answer:["هَلْ","تَذْهَبُ","إِلَى المَدْرَسَةِ"] },
+          { words:["أَكْتُبُ","لَا"], answer:["لَا","أَكْتُبُ"] }
+        ]
+      },
+      {
+        id:"ch11-ex5", type:"creative", title:"Exercise 5 — Create Your Own",
+        instructions:"Open-ended — no single right answer.",
+        items:[
+          { prompt:"Write a yes/no question with هَلْ, then answer it twice — once with نعم and once with لا." },
+          { prompt:"Write three things you don't do, using لَا before each verb." }
+        ]
+      }
+    ],
+
+    speakingPhrases: [
+      { icon:"❓", ar:"هَلْ تَذْهَبُ إِلَى المَدْرَسَةِ؟", plain:"هل تذهب إلى المدرسة", translit:"hal tadh-habu ilaa al-madrasati?", meaning:"\"Do you go to school?\"" },
+      { icon:"✅", ar:"نَعَمْ، أَذْهَبُ", plain:"نعم أذهب", translit:"na'am, adh-habu", meaning:"\"Yes, I go\"" },
+      { icon:"🚫", ar:"لَا، لَا أَكْتُبُ", plain:"لا لا أكتب", translit:"laa, laa aktubu", meaning:"\"No, I don't write\"" },
+      { icon:"❓", ar:"هَلْ هِيَ تَقْرَأُ؟", plain:"هل هي تقرأ", translit:"hal hiya taqra'u?", meaning:"\"Is she reading?\"" }
+    ]
+  },
+
+  {
+    id: 16,
+    unit: "u5",
+    label: "Checkpoint 5",
+    type: "checkpoint",
+    difficulty: 8,
+    requires: 15,
+    icon: "🔁",
+    title: "Review: Unit 5",
+    arabicTitle: "مُرَاجَعَة",
+    desc: "A cumulative check of present-tense verbs for all six persons, negation with لا, and yes/no questions with هل.",
+    locked: false,
+
+    content: [
+      { type:"p", text:"This Checkpoint completes Unit 5, mixing every present-tense person, negation, and questions with concepts from earlier units." }
+    ],
+    vocabCategories: [],
+    exercises: [
+      {
+        id:"c5-ex1", type:"mcq", title:"Mixed Review",
+        instructions:"Questions pull from Chapters 9 through 11.",
+        items:[
+          { icon:"🧍", promptText:"أَنَا ___ إِلَى البَيْتِ (I go)", options:["أَذْهَبُ","تَذْهَبُ","يَذْهَبُ"], correct:0 },
+          { icon:"👩", promptText:"أَنْتِ ___ الدَّرْسَ (you, f., write)", options:["تَكْتُبُ","تَكْتُبِينَ","أَكْتُبُ"], correct:1 },
+          { promptText:"___ يَذْهَبُ؟ (Is he going?)", options:["لَا","هَلْ","نَعَمْ"], correct:1 },
+          { promptText:"لَا أَقْرَأُ means...", options:["I read.","I don't read.","Do I read?"], correct:1 },
+          { icon:"⚽⬇️", promptText:"The ball is _____ the chair. (review, Ch. 8)", options:["تَحْتَ","عَلَى"], correct:0 }
+        ]
+      }
+    ],
+    speakingPhrases: [
+      { icon:"❓", ar:"هَلْ تَذْهَبُ إِلَى المَدْرَسَةِ؟", plain:"هل تذهب إلى المدرسة", translit:"hal tadh-habu ilaa al-madrasati?", meaning:"\"Do you go to school?\"" },
+      { icon:"✍️", ar:"هُوَ يَكْتُبُ الدَّرْسَ", plain:"هو يكتب الدرس", translit:"huwa yaktubu ad-darsa", meaning:"\"He writes the lesson\"" },
+      { icon:"🚫", ar:"لَا، لَا أَذْهَبُ", plain:"لا لا أذهب", translit:"laa, laa adh-habu", meaning:"\"No, I don't go\"" }
+    ]
+  },
+
+  {
+    id: 17,
+    unit: "u6",
+    label: "Chapter 12",
+    difficulty: 6,
+    requires: 16,
+    icon: "👨‍🏫",
+    title: "He Is a... / She Is a... — Talking About People",
+    arabicTitle: "الجُمْلَة الاسْمِيَّة: هُوَ / هِيَ",
+    desc: "Simple sentences built from a pronoun and a noun — no verb needed — using everyday professions.",
+    locked: false,
+
+    content: [
+      { type:"p", text:"Arabic has a sentence type with no verb at all: الجُمْلَة الاسْمِيَّة (the nominal sentence) — just a subject and a description sitting side by side. هُوَ طَالِبٌ literally means \"he [is] a student\"; there's no separate word for \"is\" in the present tense." },
+      { type:"h", text:"Professions" },
+      { type:"examples", items:[
+        { icon:"🧑‍🎓", ar:"طَالِبٌ", translit:"taalibun", meaning:"a student (m.)" },
+        { icon:"👩‍🎓", ar:"طَالِبَةٌ", translit:"taalibatun", meaning:"a student (f.)" },
+        { icon:"🧑‍🏫", ar:"مُعَلِّمٌ", translit:"mu'allimun", meaning:"a teacher (m.)" },
+        { icon:"👩‍🏫", ar:"مُعَلِّمَةٌ", translit:"mu'allimatun", meaning:"a teacher (f.)" },
+        { icon:"🧑‍⚕️", ar:"طَبِيبٌ", translit:"tabeebun", meaning:"a doctor (m.)" },
+        { icon:"👩‍⚕️", ar:"طَبِيبَةٌ", translit:"tabeebatun", meaning:"a doctor (f.)" }
+      ]},
+      { type:"note", html:"Same ةٌ ending pattern you already know from adjectives and colors (Chapter 7) — it turns a masculine word feminine here too." },
+      { type:"h", text:"Building the Sentence" },
+      { type:"examples", items:[
+        { icon:"🧑‍🎓", ar:"هُوَ طَالِبٌ", translit:"huwa taalibun", meaning:"He is a student" },
+        { icon:"👩‍🏫", ar:"هِيَ مُعَلِّمَةٌ", translit:"hiya mu'allimatun", meaning:"She is a teacher" },
+        { icon:"🧑‍⚕️", ar:"أَنَا طَبِيبٌ", translit:"anaa tabeebun", meaning:"I am a doctor" }
+      ]},
+      { type:"h", text:"Asking with هَلْ" },
+      { type:"examples", items:[
+        { icon:"❓", ar:"هَلْ هُوَ مُعَلِّمٌ؟", translit:"hal huwa mu'allimun?", meaning:"Is he a teacher?" },
+        { icon:"✅", ar:"نَعَمْ، هُوَ مُعَلِّمٌ", translit:"na'am, huwa mu'allimun", meaning:"Yes, he is a teacher" }
+      ]}
+    ],
+
+    vocabCategories: [
+      { name:"Professions", words:[
+        {icon:"🧑‍🎓", ar:"طَالِبٌ", translit:"taalibun", en:"Student (m.)"},
+        {icon:"👩‍🎓", ar:"طَالِبَةٌ", translit:"taalibatun", en:"Student (f.)"},
+        {icon:"🧑‍🏫", ar:"مُعَلِّمٌ", translit:"mu'allimun", en:"Teacher (m.)"},
+        {icon:"👩‍🏫", ar:"مُعَلِّمَةٌ", translit:"mu'allimatun", en:"Teacher (f.)"},
+        {icon:"🧑‍⚕️", ar:"طَبِيبٌ", translit:"tabeebun", en:"Doctor (m.)"},
+        {icon:"👩‍⚕️", ar:"طَبِيبَةٌ", translit:"tabeebatun", en:"Doctor (f.)"}
+      ]},
+      { name:"Sentence Practice", words:[
+        {icon:"🧑‍🎓", ar:"هُوَ طَالِبٌ", translit:"huwa taalibun", en:"He is a student"},
+        {icon:"👩‍🏫", ar:"هِيَ مُعَلِّمَةٌ", translit:"hiya mu'allimatun", en:"She is a teacher"}
+      ]}
+    ],
+
+    exercises: [
+      {
+        id:"ch12-ex1", type:"mcq", title:"Exercise 1 — Pick the Right Word",
+        instructions:"Choose the correct profession or gender form.",
+        items:[
+          { icon:"👩‍🏫", promptText:"هِيَ ___ (she is a teacher)", options:["مُعَلِّمٌ","مُعَلِّمَةٌ","طَالِبٌ"], correct:1 },
+          { icon:"🧑‍⚕️", promptText:"هُوَ ___ (he is a doctor)", options:["طَبِيبَةٌ","طَبِيبٌ","طَالِبَةٌ"], correct:1 },
+          { promptText:"طَالِبَةٌ means...", options:["Teacher (f.)","Doctor (f.)","Student (f.)"], correct:2 },
+          { promptText:"Which sentence has no verb at all?", options:["أَذْهَبُ إِلَى المَدْرَسَةِ","هُوَ طَالِبٌ","تَكْتُبِينَ الدَّرْسَ"], correct:1 }
+        ]
+      },
+      {
+        id:"ch12-ex2", type:"matching", title:"Exercise 2 — Click to Match",
+        instructions:"Tap a word, then tap its meaning.",
+        pairs:[
+          { left:"طَالِبٌ", right:"Student (m.)" },
+          { left:"مُعَلِّمَةٌ", right:"Teacher (f.)" },
+          { left:"طَبِيبٌ", right:"Doctor (m.)" }
+        ]
+      },
+      {
+        id:"ch12-ex3", type:"translate", title:"Exercise 3 — Translate to English",
+        instructions:"Type the English meaning of each sentence.",
+        items:[
+          { icon:"🧑‍🎓", ar:"هُوَ طَالِبٌ", keywords:["he","student"] },
+          { icon:"👩‍⚕️", ar:"هِيَ طَبِيبَةٌ", keywords:["she","doctor"] },
+          { icon:"❓", ar:"هَلْ هُوَ مُعَلِّمٌ؟", keywords:["is","he","teacher"] }
+        ]
+      },
+      {
+        id:"ch12-ex4", type:"sentence", title:"Exercise 4 — Build the Sentence",
+        instructions:"Tap the word chips in the correct order.",
+        items:[
+          { words:["طَالِبَةٌ","هِيَ"], answer:["هِيَ","طَالِبَةٌ"] },
+          { words:["مُعَلِّمٌ؟","هَلْ","هُوَ"], answer:["هَلْ","هُوَ","مُعَلِّمٌ؟"] }
+        ]
+      },
+      {
+        id:"ch12-ex5", type:"creative", title:"Exercise 5 — Create Your Own",
+        instructions:"Open-ended — no single right answer.",
+        items:[
+          { prompt:"Write a nominal sentence about your own profession (real or invented) using أَنَا." },
+          { prompt:"Write a هَلْ question asking about someone's profession, then answer it." }
+        ]
+      }
+    ],
+
+    speakingPhrases: [
+      { icon:"🧑‍🎓", ar:"هُوَ طَالِبٌ", plain:"هو طالب", translit:"huwa taalibun", meaning:"\"He is a student\"" },
+      { icon:"👩‍🏫", ar:"هِيَ مُعَلِّمَةٌ", plain:"هي معلمة", translit:"hiya mu'allimatun", meaning:"\"She is a teacher\"" },
+      { icon:"❓", ar:"هَلْ أَنْتَ طَبِيبٌ؟", plain:"هل أنت طبيب", translit:"hal anta tabeebun?", meaning:"\"Are you a doctor?\"" }
+    ]
+  },
+
+  {
+    id: 18,
+    unit: "u6",
+    label: "Chapter 13",
+    difficulty: 7,
+    requires: 17,
+    icon: "🌍",
+    title: "Where Are You From? — The Nisba Adjective",
+    arabicTitle: "يَاء النِّسْبَة",
+    desc: "Turn a place name into \"from there\" with one simple ending — ياء النسبة.",
+    locked: false,
+
+    content: [
+      { type:"p", text:"Arabic can turn almost any noun into \"relating to X\" just by adding an ending — ـِيّ for masculine, ـِيَّة for feminine. This is called النِّسْبَة (an-nisba, \"attribution\"), and it's most often used for nationalities." },
+      { type:"h", text:"From Country to Nationality" },
+      { type:"examples", items:[
+        { icon:"🇪🇬", ar:"مِصْر ← مِصْرِيٌّ / مِصْرِيَّةٌ", translit:"misr → misriyyun / misriyyatun", meaning:"Egypt → Egyptian (m./f.)" },
+        { icon:"🇦🇪", ar:"الإِمَارَات ← إِمَارَاتِيٌّ / إِمَارَاتِيَّةٌ", translit:"al-imaaraat → imaaraatiyyun / imaaraatiyyatun", meaning:"UAE → Emirati (m./f.)" },
+        { icon:"🇵🇰", ar:"باكِسْتَان ← باكِسْتَانِيٌّ / باكِسْتَانِيَّةٌ", translit:"baakistaan → baakistaaniyyun / baakistaaniyyatun", meaning:"Pakistan → Pakistani (m./f.)" }
+      ]},
+      { type:"h", text:"Using It in a Sentence" },
+      { type:"examples", items:[
+        { icon:"🇦🇪", ar:"هُوَ إِمَارَاتِيٌّ", translit:"huwa imaaraatiyyun", meaning:"He is Emirati" },
+        { icon:"🇪🇬", ar:"هِيَ مِصْرِيَّةٌ", translit:"hiya misriyyatun", meaning:"She is Egyptian" },
+        { icon:"🇵🇰", ar:"أَنَا باكِسْتَانِيٌّ", translit:"anaa baakistaaniyyun", meaning:"I am Pakistani" }
+      ]},
+      { type:"note", html:"If the place name already ends in ة, drop it before adding the nisba ending — e.g. مَكَّة → مَكِّيٌّ (Mecca → \"from Mecca\")." }
+    ],
+
+    vocabCategories: [
+      { name:"Countries", words:[
+        {icon:"🇪🇬", ar:"مِصْر", translit:"misr", en:"Egypt"},
+        {icon:"🇦🇪", ar:"الإِمَارَات", translit:"al-imaaraat", en:"UAE"},
+        {icon:"🇵🇰", ar:"باكِسْتَان", translit:"baakistaan", en:"Pakistan"}
+      ]},
+      { name:"Nationalities", words:[
+        {icon:"🇪🇬", ar:"مِصْرِيٌّ", translit:"misriyyun", en:"Egyptian (m.)"},
+        {icon:"🇦🇪", ar:"إِمَارَاتِيَّةٌ", translit:"imaaraatiyyatun", en:"Emirati (f.)"},
+        {icon:"🇵🇰", ar:"باكِسْتَانِيٌّ", translit:"baakistaaniyyun", en:"Pakistani (m.)"}
+      ]}
+    ],
+
+    exercises: [
+      {
+        id:"ch13-ex1", type:"mcq", title:"Exercise 1 — Pick the Right Nationality",
+        instructions:"Choose the correct nisba form.",
+        items:[
+          { icon:"🇦🇪", promptText:"هُوَ ___ (he is Emirati)", options:["إِمَارَاتِيٌّ","إِمَارَاتِيَّةٌ","مِصْرِيٌّ"], correct:0 },
+          { icon:"🇪🇬", promptText:"هِيَ ___ (she is Egyptian)", options:["مِصْرِيٌّ","مِصْرِيَّةٌ","باكِسْتَانِيَّةٌ"], correct:1 },
+          { promptText:"The nisba ending for masculine is...", options:["ـَة","ـِيّ","ـُون"], correct:1 },
+          { promptText:"باكِسْتَانِيٌّ means...", options:["Pakistan","Pakistani (m.)","Pakistani (f.)"], correct:1 }
+        ]
+      },
+      {
+        id:"ch13-ex2", type:"matching", title:"Exercise 2 — Click to Match",
+        instructions:"Tap a country, then tap its nationality.",
+        pairs:[
+          { left:"مِصْر", right:"مِصْرِيٌّ" },
+          { left:"الإِمَارَات", right:"إِمَارَاتِيٌّ" },
+          { left:"باكِسْتَان", right:"باكِسْتَانِيٌّ" }
+        ]
+      },
+      {
+        id:"ch13-ex3", type:"translate", title:"Exercise 3 — Translate to English",
+        instructions:"Type the English meaning of each sentence.",
+        items:[
+          { icon:"🇦🇪", ar:"هُوَ إِمَارَاتِيٌّ", keywords:["emirati"] },
+          { icon:"🇪🇬", ar:"هِيَ مِصْرِيَّةٌ", keywords:["egyptian"] },
+          { icon:"🇵🇰", ar:"أَنَا باكِسْتَانِيٌّ", keywords:["pakistani"] }
+        ]
+      },
+      {
+        id:"ch13-ex4", type:"sentence", title:"Exercise 4 — Build the Sentence",
+        instructions:"Tap the word chips in the correct order.",
+        items:[
+          { words:["إِمَارَاتِيَّةٌ","هِيَ"], answer:["هِيَ","إِمَارَاتِيَّةٌ"] }
+        ]
+      },
+      {
+        id:"ch13-ex5", type:"creative", title:"Exercise 5 — Create Your Own",
+        instructions:"Open-ended — no single right answer.",
+        items:[
+          { prompt:"Write your own nationality's nisba form (look up the Arabic name of your country if you're not sure), and use it in a sentence with أَنَا." }
+        ]
+      }
+    ],
+
+    speakingPhrases: [
+      { icon:"🇦🇪", ar:"هُوَ إِمَارَاتِيٌّ", plain:"هو إماراتي", translit:"huwa imaaraatiyyun", meaning:"\"He is Emirati\"" },
+      { icon:"🇵🇰", ar:"أَنَا باكِسْتَانِيٌّ", plain:"أنا باكستاني", translit:"anaa baakistaaniyyun", meaning:"\"I am Pakistani\"" }
+    ]
+  },
+
+  {
+    id: 19,
+    unit: "u6",
+    label: "Checkpoint 6",
+    type: "checkpoint",
+    difficulty: 7,
+    requires: 18,
+    icon: "🔁",
+    title: "Review: Unit 6",
+    arabicTitle: "مُرَاجَعَة",
+    desc: "A cumulative check of nominal sentences, professions, and the nisba adjective — mixed with earlier chapters.",
+    locked: false,
+
+    content: [
+      { type:"p", text:"This Checkpoint completes Unit 6, mixing nominal sentences, professions, and nisba with concepts from every earlier chapter." }
+    ],
+    vocabCategories: [],
+    exercises: [
+      {
+        id:"c6-ex1", type:"mcq", title:"Mixed Review",
+        instructions:"Questions pull from Chapters 12 and 13.",
+        items:[
+          { icon:"👩‍🏫", promptText:"هِيَ ___ (she is a teacher)", options:["مُعَلِّمٌ","مُعَلِّمَةٌ"], correct:1 },
+          { icon:"🇦🇪", promptText:"هُوَ ___ (he is Emirati)", options:["إِمَارَاتِيَّةٌ","إِمَارَاتِيٌّ"], correct:1 },
+          { promptText:"Which sentence needs no verb at all?", options:["هُوَ طَالِبٌ","أَذْهَبُ إِلَى البَيْتِ"], correct:0 },
+          { icon:"🖊️📦", promptText:"القَلَمُ ___ البَيْتِ (the pen is in the house — review, Ch. 8)", options:["فِي","عَلَى"], correct:0 }
+        ]
+      }
+    ],
+    speakingPhrases: [
+      { icon:"🧑‍🎓", ar:"هُوَ طَالِبٌ", plain:"هو طالب", translit:"huwa taalibun", meaning:"\"He is a student\"" },
+      { icon:"🇪🇬", ar:"هِيَ مِصْرِيَّةٌ", plain:"هي مصرية", translit:"hiya misriyyatun", meaning:"\"She is Egyptian\"" }
+    ]
+  },
+
+  {
+    id: 20,
+    unit: "u7",
+    label: "Chapter 14",
+    difficulty: 8,
+    requires: 19,
+    icon: "✌️",
+    title: "Talking About Two — The Dual Number",
+    arabicTitle: "المُثَنَّى",
+    desc: "Arabic has a special form just for exactly two of something — neither singular nor plural.",
+    locked: false,
+
+    content: [
+      { type:"p", text:"English only has singular and plural (book / books). Arabic has a third option in between: المُثَنَّى (the dual) — used only for exactly two of something. It comes up constantly, so it's worth learning early even in simple form." },
+      { type:"h", text:"Making a Noun Dual" },
+      { type:"examples", items:[
+        { icon:"📖", ar:"كِتَابٌ ← كِتَابَانِ", translit:"kitaabun → kitaabaani", meaning:"a book → two books" },
+        { icon:"🏠", ar:"بَيْتٌ ← بَيْتَانِ", translit:"baytun → baytaani", meaning:"a house → two houses" },
+        { icon:"🖊️", ar:"قَلَمٌ ← قَلَمَانِ", translit:"qalamun → qalamaani", meaning:"a pen → two pens" }
+      ]},
+      { type:"pattern", ar:"الاسْم المُفْرَد + ـَانِ", translit:"singular noun + -aani", desc:"Drop the tanween ending of the singular, then add ـَانِ to make it dual." },
+      { type:"h", text:"Dual Demonstratives" },
+      { type:"examples", items:[
+        { icon:"📖📖", ar:"هَذَانِ كِتَابَانِ", translit:"hadhaani kitaabaani", meaning:"These (two) are two books" },
+        { icon:"🚗🚗", ar:"هَاتَانِ سَيَّارَتَانِ", translit:"haataani sayyaarataani", meaning:"These (two) are two cars" }
+      ]},
+      { type:"h", text:"Dual Pronoun: هُمَا (they, two)" },
+      { type:"examples", items:[
+        { icon:"🧑‍🎓🧑‍🎓", ar:"هُمَا طَالِبَانِ", translit:"humaa taalibaani", meaning:"They (two, m.) are students" },
+        { icon:"👩‍🎓👩‍🎓", ar:"هُمَا طَالِبَتَانِ", translit:"humaa taalibataani", meaning:"They (two, f.) are students" }
+      ]},
+      { type:"note", html:"The dual has its own full verb conjugation too — that's a more advanced topic for later. For now, recognizing and building dual nouns, demonstratives, and هُمَا sentences is the goal." }
+    ],
+
+    vocabCategories: [
+      { name:"Dual Nouns", words:[
+        {icon:"📖", ar:"كِتَابَانِ", translit:"kitaabaani", en:"Two books"},
+        {icon:"🏠", ar:"بَيْتَانِ", translit:"baytaani", en:"Two houses"},
+        {icon:"🖊️", ar:"قَلَمَانِ", translit:"qalamaani", en:"Two pens"},
+        {icon:"🚗", ar:"سَيَّارَتَانِ", translit:"sayyaarataani", en:"Two cars"}
+      ]},
+      { name:"Dual Words", words:[
+        {icon:"👉", ar:"هَذَانِ", translit:"hadhaani", en:"These two (m.)"},
+        {icon:"👉", ar:"هَاتَانِ", translit:"haataani", en:"These two (f.)"},
+        {icon:"👥", ar:"هُمَا", translit:"humaa", en:"They two"}
+      ]}
+    ],
+
+    exercises: [
+      {
+        id:"ch14-ex1", type:"mcq", title:"Exercise 1 — Pick the Dual Form",
+        instructions:"Choose the correct dual form.",
+        items:[
+          { icon:"📖📖", promptText:"The dual of كِتَابٌ is...", options:["كُتُبٌ","كِتَابَانِ","كِتَابُون"], correct:1 },
+          { icon:"🚗🚗", promptText:"The dual of سَيَّارَةٌ is...", options:["سَيَّارَاتٌ","سَيَّارَتَانِ","سَيَّارَةٌ"], correct:1 },
+          { promptText:"هُمَا means...", options:["He and she","They two","We two"], correct:1 },
+          { promptText:"\"These two\" (feminine) is...", options:["هَذَانِ","هَاتَانِ","هَؤُلَاءِ"], correct:1 }
+        ]
+      },
+      {
+        id:"ch14-ex2", type:"matching", title:"Exercise 2 — Click to Match",
+        instructions:"Tap a dual word, then tap its meaning.",
+        pairs:[
+          { left:"كِتَابَانِ", right:"Two books" },
+          { left:"بَيْتَانِ", right:"Two houses" },
+          { left:"هُمَا", right:"They two" }
+        ]
+      },
+      {
+        id:"ch14-ex3", type:"translate", title:"Exercise 3 — Translate to English",
+        instructions:"Type the English meaning of each sentence.",
+        items:[
+          { icon:"📖📖", ar:"هَذَانِ كِتَابَانِ", keywords:["these","two","books"] },
+          { icon:"🧑‍🎓🧑‍🎓", ar:"هُمَا طَالِبَانِ", keywords:["they","two","students"] }
+        ]
+      },
+      {
+        id:"ch14-ex4", type:"sentence", title:"Exercise 4 — Build the Sentence",
+        instructions:"Tap the word chips in the correct order.",
+        items:[
+          { words:["كِتَابَانِ","هَذَانِ"], answer:["هَذَانِ","كِتَابَانِ"] },
+          { words:["طَالِبَتَانِ","هُمَا"], answer:["هُمَا","طَالِبَتَانِ"] }
+        ]
+      },
+      {
+        id:"ch14-ex5", type:"creative", title:"Exercise 5 — Create Your Own",
+        instructions:"Open-ended — no single right answer.",
+        items:[
+          { prompt:"Make three nouns you already know (from any earlier chapter) dual, and write each with هَذَانِ or هَاتَانِ." }
+        ]
+      }
+    ],
+
+    speakingPhrases: [
+      { icon:"📖📖", ar:"هَذَانِ كِتَابَانِ", plain:"هذان كتابان", translit:"hadhaani kitaabaani", meaning:"\"These are two books\"" },
+      { icon:"👥", ar:"هُمَا طَالِبَانِ", plain:"هما طالبان", translit:"humaa taalibaani", meaning:"\"They (two) are students\"" },
+      { icon:"🚗🚗", ar:"هَاتَانِ سَيَّارَتَانِ", plain:"هاتان سيارتان", translit:"haataani sayyaarataani", meaning:"\"These are two cars\"" }
+    ]
+  },
+
+  {
+    id: 21,
+    unit: "u7",
+    label: "Checkpoint 7",
+    type: "checkpoint",
+    difficulty: 8,
+    requires: 20,
+    icon: "🔁",
+    title: "Review: Unit 7",
+    arabicTitle: "مُرَاجَعَة",
+    desc: "A cumulative check of the dual number — mixed with earlier chapters.",
+    locked: false,
+
+    content: [
+      { type:"p", text:"This Checkpoint completes Unit 7, mixing dual nouns, dual demonstratives, and هُمَا with concepts from every earlier chapter." }
+    ],
+    vocabCategories: [],
+    exercises: [
+      {
+        id:"c7-ex1", type:"mcq", title:"Mixed Review",
+        instructions:"Questions pull from Chapter 14 and earlier chapters.",
+        items:[
+          { icon:"📖📖", promptText:"The dual of كِتَابٌ is...", options:["كُتُبٌ","كِتَابَانِ"], correct:1 },
+          { promptText:"هُمَا طَالِبَتَانِ means...", options:["They (two, f.) are students","She is a student"], correct:0 },
+          { icon:"🇦🇪", promptText:"هُوَ ___ (he is Emirati — review, Ch. 13)", options:["إِمَارَاتِيَّةٌ","إِمَارَاتِيٌّ"], correct:1 },
+          { promptText:"\"These two\" (masculine) is...", options:["هَاتَانِ","هَذَانِ"], correct:1 }
+        ]
+      }
+    ],
+    speakingPhrases: [
+      { icon:"📖📖", ar:"هَذَانِ كِتَابَانِ", plain:"هذان كتابان", translit:"hadhaani kitaabaani", meaning:"\"These are two books\"" },
+      { icon:"👥", ar:"هُمَا طَالِبَانِ", plain:"هما طالبان", translit:"humaa taalibaani", meaning:"\"They (two) are students\"" }
+    ]
+  },
+
+  {
+    id: 22,
+    unit: "u8",
+    label: "Chapter 15",
+    difficulty: 9,
+    requires: 21,
+    icon: "⏪",
+    title: "Past-Tense Verbs (Intro)",
+    arabicTitle: "الفِعْل المَاضِي",
+    desc: "Talking about what already happened — \"I went,\" \"he wrote,\" \"she read.\"",
+    locked: false,
+
+    content: [
+      { type:"p", text:"Chapter 9 mentioned that every verb has three time-forms: الماضي (past), المضارع (present), and الأَمْر (command). This chapter covers الماضي for the same four persons you started with — أَنَا، نَحْنُ، هُوَ، هِيَ." },
+      { type:"h", text:"Past-Tense Endings" },
+      { type:"p", text:"المضارع attached letters before the root (أ ن ي ت). المَاضِي works the opposite way: the root stays in front, and an ending is attached after it." },
+      { type:"examples", items:[
+        { icon:"🧑", ar:"هُوَ ذَهَبَ", translit:"huwa dhahaba", meaning:"he went" },
+        { icon:"👩", ar:"هِيَ ذَهَبَتْ", translit:"hiya dhahabat", meaning:"she went" },
+        { icon:"🧍", ar:"أَنَا ذَهَبْتُ", translit:"anaa dhahabtu", meaning:"I went" },
+        { icon:"👥", ar:"نَحْنُ ذَهَبْنَا", translit:"nahnu dhahabnaa", meaning:"we went" }
+      ]},
+      { type:"pattern", ar:"فَعَلَ / فَعَلَتْ / فَعَلْتُ / فَعَلْنَا", translit:"fa'ala / fa'alat / fa'altu / fa'alnaa", desc:"The four endings for he / she / I / we, attached after the unchanging root. Notice هُوَ takes no ending at all — the plain root IS the \"he\" past-tense form, which is also why dictionaries list every Arabic verb under its هُوَ past-tense shape." },
+      { type:"h", text:"Same Pattern, Different Verbs" },
+      { type:"examples", items:[
+        { icon:"✍️", ar:"هُوَ كَتَبَ", translit:"huwa kataba", meaning:"he wrote" },
+        { icon:"✍️", ar:"أَنَا كَتَبْتُ", translit:"anaa katabtu", meaning:"I wrote" },
+        { icon:"📖", ar:"هِيَ قَرَأَتْ", translit:"hiya qara'at", meaning:"she read" },
+        { icon:"📖", ar:"نَحْنُ قَرَأْنَا", translit:"nahnu qara'naa", meaning:"we read" }
+      ]},
+      { type:"h", text:"Putting It in a Sentence" },
+      { type:"wordcard", icon:"✉️", ar:"رِسَالَةٌ", translit:"risaalatun", meaning:"a letter" },
+      { type:"examples", items:[
+        { icon:"✍️✉️", ar:"هُوَ كَتَبَ رِسَالَةً", translit:"huwa kataba risaalatan", meaning:"He wrote a letter" },
+        { icon:"🏫", ar:"أَنَا ذَهَبْتُ إِلَى المَدْرَسَةِ", translit:"anaa dhahabtu ilaa al-madrasati", meaning:"I went to school" }
+      ]},
+      { type:"note", html:"Just like المضارع, أَنْتَ (you) and the rest of الماضي's forms come in the next chapter — this one deliberately sticks to the same four persons Chapter 9 started with, so the only new thing to learn is the past-tense shape itself." }
+    ],
+
+    vocabCategories: [
+      { name:"Verb: ذهب (to go) — Past", words:[
+        {icon:"🧍", ar:"ذَهَبْتُ", translit:"dhahabtu", en:"I went"},
+        {icon:"👥", ar:"ذَهَبْنَا", translit:"dhahabnaa", en:"We went"},
+        {icon:"🧑", ar:"ذَهَبَ", translit:"dhahaba", en:"He went"},
+        {icon:"👩", ar:"ذَهَبَتْ", translit:"dhahabat", en:"She went"}
+      ]},
+      { name:"Verb: كتب (to write) & قرأ (to read) — Past", words:[
+        {icon:"✍️", ar:"كَتَبَ", translit:"kataba", en:"He wrote"},
+        {icon:"✍️", ar:"كَتَبْتُ", translit:"katabtu", en:"I wrote"},
+        {icon:"📖", ar:"قَرَأَتْ", translit:"qara'at", en:"She read"},
+        {icon:"📖", ar:"قَرَأْنَا", translit:"qara'naa", en:"We read"}
+      ]},
+      { name:"New Vocabulary", words:[
+        {icon:"✉️", ar:"رِسَالَةٌ", translit:"risaalatun", en:"A letter"}
+      ]}
+    ],
+
+    exercises: [
+      {
+        id:"ch15-ex1", type:"mcq", title:"Exercise 1 — Pick the Right Ending",
+        instructions:"Choose the correctly conjugated past-tense verb for the subject given.",
+        items:[
+          { icon:"🧍", promptText:"أَنَا ___ إِلَى المَدْرَسَةِ (went)", options:["ذَهَبْتُ","ذَهَبَ","ذَهَبْنَا"], correct:0 },
+          { icon:"🧑", promptText:"هُوَ ___ رِسَالَةً (wrote a letter)", options:["كَتَبْتُ","كَتَبَتْ","كَتَبَ"], correct:2 },
+          { icon:"👩", promptText:"هِيَ ___ كِتَابًا (read a book)", options:["قَرَأَ","قَرَأَتْ","قَرَأْتُ"], correct:1 },
+          { icon:"👥", promptText:"نَحْنُ ___ إِلَى البَيْتِ (went)", options:["ذَهَبَ","ذَهَبْتُ","ذَهَبْنَا"], correct:2 },
+          { promptText:"Which past-tense form has no ending at all?", options:["هُوَ","هِيَ","أَنَا"], correct:0 }
+        ]
+      },
+      {
+        id:"ch15-ex2", type:"matching", title:"Exercise 2 — Click to Match",
+        instructions:"Tap a verb form, then tap its meaning.",
+        pairs:[
+          { left:"ذَهَبْتُ", right:"I went" },
+          { left:"كَتَبَ", right:"He wrote" },
+          { left:"قَرَأَتْ", right:"She read" },
+          { left:"ذَهَبْنَا", right:"We went" }
+        ]
+      },
+      {
+        id:"ch15-ex3", type:"translate", title:"Exercise 3 — Translate to English",
+        instructions:"Type the English meaning of each sentence.",
+        items:[
+          { icon:"🏫", ar:"أَنَا ذَهَبْتُ إِلَى المَدْرَسَةِ", keywords:["went","school"] },
+          { icon:"✍️✉️", ar:"هُوَ كَتَبَ رِسَالَةً", keywords:["wrote","letter"] },
+          { icon:"📖", ar:"هِيَ قَرَأَتْ", keywords:["read","she"] }
+        ]
+      },
+      {
+        id:"ch15-ex4", type:"sentence", title:"Exercise 4 — Build the Sentence",
+        instructions:"Tap the word chips in the correct order.",
+        items:[
+          { words:["المَدْرَسَةِ","إِلَى","ذَهَبْتُ","أَنَا"], answer:["أَنَا","ذَهَبْتُ","إِلَى","المَدْرَسَةِ"] },
+          { words:["رِسَالَةً","كَتَبَ","هُوَ"], answer:["هُوَ","كَتَبَ","رِسَالَةً"] }
+        ]
+      },
+      {
+        id:"ch15-ex5", type:"creative", title:"Exercise 5 — Create Your Own",
+        instructions:"Open-ended — no single right answer.",
+        items:[
+          { prompt:"Conjugate ذهب, كتب, and قرأ for أنا, هو, هي, and نحن in the past tense — write out all four forms of each." },
+          { prompt:"Write one original past-tense sentence using كَتَبَ رِسَالَةً with a different subject." }
+        ]
+      }
+    ],
+
+    speakingPhrases: [
+      { icon:"🏫", ar:"أَنَا ذَهَبْتُ إِلَى المَدْرَسَةِ", plain:"أنا ذهبت إلى المدرسة", translit:"anaa dhahabtu ilaa al-madrasati", meaning:"\"I went to school\"" },
+      { icon:"✍️✉️", ar:"هُوَ كَتَبَ رِسَالَةً", plain:"هو كتب رسالة", translit:"huwa kataba risaalatan", meaning:"\"He wrote a letter\"" },
+      { icon:"📖", ar:"هِيَ قَرَأَتْ", plain:"هي قرأت", translit:"hiya qara'at", meaning:"\"She read\"" }
+    ]
+  },
+
+  {
+    id: 23,
+    unit: "u8",
+    label: "Chapter 16",
+    difficulty: 9,
+    requires: 22,
+    icon: "🗣️",
+    title: "Past Tense: Talking to Someone",
+    arabicTitle: "المُخَاطَب فِي المَاضِي",
+    desc: "Add \"you\" (masculine and feminine) to the past tense.",
+    locked: false,
+
+    content: [
+      { type:"p", text:"Chapter 15 covered أَنَا، نَحْنُ، هُوَ، and هِيَ. Now we add the two forms for \"you\": أَنْتَ (to a man) and أَنْتِ (to a woman)." },
+      { type:"h", text:"أَنْتَ (you, to a man)" },
+      { type:"examples", items:[
+        { icon:"🧑", ar:"أَنْتَ ذَهَبْتَ", translit:"anta dhahabta", meaning:"you (m.) went" },
+        { icon:"✍️", ar:"أَنْتَ كَتَبْتَ", translit:"anta katabta", meaning:"you (m.) wrote" }
+      ]},
+      { type:"h", text:"أَنْتِ (you, to a woman)" },
+      { type:"examples", items:[
+        { icon:"👩", ar:"أَنْتِ ذَهَبْتِ", translit:"anti dhahabti", meaning:"you (f.) went" },
+        { icon:"✍️", ar:"أَنْتِ كَتَبْتِ", translit:"anti katabti", meaning:"you (f.) wrote" }
+      ]},
+      { type:"pattern", ar:"فَعَلْتَ / فَعَلْتِ", translit:"fa'alta / fa'alti", desc:"Masculine and feminine differ only by the short vowel on the final ت — fatha (تَ) for a man, kasra (تِ) for a woman. In fast speech they can sound alike, so the pronoun أَنْتَ/أَنْتِ itself is what usually removes the ambiguity." },
+      { type:"h", text:"All Six Forms So Far" },
+      { type:"examples", items:[
+        { icon:"🧍", ar:"أَنَا ذَهَبْتُ", translit:"anaa dhahabtu", meaning:"I went" },
+        { icon:"🧑", ar:"أَنْتَ ذَهَبْتَ", translit:"anta dhahabta", meaning:"you (m.) went" },
+        { icon:"👩", ar:"أَنْتِ ذَهَبْتِ", translit:"anti dhahabti", meaning:"you (f.) went" },
+        { icon:"🧑", ar:"هُوَ ذَهَبَ", translit:"huwa dhahaba", meaning:"he went" },
+        { icon:"👩", ar:"هِيَ ذَهَبَتْ", translit:"hiya dhahabat", meaning:"she went" },
+        { icon:"👥", ar:"نَحْنُ ذَهَبْنَا", translit:"nahnu dhahabnaa", meaning:"we went" }
+      ]},
+      { type:"wordcard", icon:"🕐", ar:"أَمْسِ", translit:"amsi", meaning:"yesterday" },
+      { type:"examples", items:[
+        { icon:"🏫🕐", ar:"أَنْتَ ذَهَبْتَ إِلَى المَدْرَسَةِ أَمْسِ", translit:"anta dhahabta ilaa al-madrasati amsi", meaning:"You (m.) went to school yesterday" }
+      ]}
+    ],
+
+    vocabCategories: [
+      { name:"Past Tense: You", words:[
+        {icon:"🧑", ar:"ذَهَبْتَ", translit:"dhahabta", en:"You (m.) went"},
+        {icon:"👩", ar:"ذَهَبْتِ", translit:"dhahabti", en:"You (f.) went"},
+        {icon:"🧑", ar:"كَتَبْتَ", translit:"katabta", en:"You (m.) wrote"},
+        {icon:"👩", ar:"كَتَبْتِ", translit:"katabti", en:"You (f.) wrote"}
+      ]},
+      { name:"New Vocabulary", words:[
+        {icon:"🕐", ar:"أَمْسِ", translit:"amsi", en:"Yesterday"}
+      ]}
+    ],
+
+    exercises: [
+      {
+        id:"ch16-ex1", type:"mcq", title:"Exercise 1 — Pick the Right Form",
+        instructions:"Choose the correctly conjugated past-tense verb for the subject given.",
+        items:[
+          { icon:"🧑", promptText:"أَنْتَ ___ الرِّسَالَةَ (you, m., wrote the letter)", options:["كَتَبْتَ","كَتَبْتِ","كَتَبَ"], correct:0 },
+          { icon:"👩", promptText:"أَنْتِ ___ إِلَى المَدْرَسَةِ (you, f., went)", options:["ذَهَبْتَ","ذَهَبْتِ","ذَهَبَتْ"], correct:1 },
+          { promptText:"Which short vowel marks \"you, feminine\" in the past tense?", options:["فتحة (تَ)","كسرة (تِ)","ضمة (تُ)"], correct:1 },
+          { icon:"🕐", promptText:"\"Yesterday\" is...", options:["أَمْسِ","غَدًا","اليَوْمَ"], correct:0 }
+        ]
+      },
+      {
+        id:"ch16-ex2", type:"matching", title:"Exercise 2 — Click to Match",
+        instructions:"Tap a verb form, then tap its meaning.",
+        pairs:[
+          { left:"ذَهَبْتَ", right:"You (m.) went" },
+          { left:"ذَهَبْتِ", right:"You (f.) went" },
+          { left:"كَتَبْتِ", right:"You (f.) wrote" },
+          { left:"أَمْسِ", right:"Yesterday" }
+        ]
+      },
+      {
+        id:"ch16-ex3", type:"translate", title:"Exercise 3 — Translate to English",
+        instructions:"Type the English meaning of each sentence.",
+        items:[
+          { icon:"🧑", ar:"أَنْتَ ذَهَبْتَ إِلَى المَدْرَسَةِ", keywords:["you","went","school"] },
+          { icon:"👩", ar:"أَنْتِ كَتَبْتِ رِسَالَةً", keywords:["you","wrote","letter"] },
+          { icon:"🏫🕐", ar:"أَنْتَ ذَهَبْتَ إِلَى المَدْرَسَةِ أَمْسِ", keywords:["you","went","school","yesterday"] }
+        ]
+      },
+      {
+        id:"ch16-ex4", type:"sentence", title:"Exercise 4 — Build the Sentence",
+        instructions:"Tap the word chips in the correct order.",
+        items:[
+          { words:["رِسَالَةً","كَتَبْتِ","أَنْتِ"], answer:["أَنْتِ","كَتَبْتِ","رِسَالَةً"] },
+          { words:["أَمْسِ","المَدْرَسَةِ","إِلَى","ذَهَبْتَ","أَنْتَ"], answer:["أَنْتَ","ذَهَبْتَ","إِلَى","المَدْرَسَةِ","أَمْسِ"] }
+        ]
+      },
+      {
+        id:"ch16-ex5", type:"creative", title:"Exercise 5 — Create Your Own",
+        instructions:"Open-ended — no single right answer.",
+        items:[
+          { prompt:"Write one past-tense sentence to a man (أنتَ) and one to a woman (أنتِ), using ذهب or كتب." },
+          { prompt:"List all six past-tense forms of قرأ that you know how to build so far (أنا/أنتَ/أنتِ/هو/هي/نحن)." }
+        ]
+      }
+    ],
+
+    speakingPhrases: [
+      { icon:"🧑", ar:"أَنْتَ ذَهَبْتَ إِلَى المَدْرَسَةِ أَمْسِ", plain:"أنت ذهبت إلى المدرسة أمس", translit:"anta dhahabta ilaa al-madrasati amsi", meaning:"\"You (m.) went to school yesterday\"" },
+      { icon:"👩", ar:"أَنْتِ كَتَبْتِ رِسَالَةً", plain:"أنتِ كتبتِ رسالة", translit:"anti katabti risaalatan", meaning:"\"You (f.) wrote a letter\"" }
+    ]
+  },
+
+  {
+    id: 24,
+    unit: "u8",
+    label: "Checkpoint 8",
+    type: "checkpoint",
+    difficulty: 9,
+    requires: 23,
+    icon: "🔁",
+    title: "Review: Unit 8",
+    arabicTitle: "مُرَاجَعَة",
+    desc: "A cumulative check of the past tense — mixed with earlier chapters.",
+    locked: false,
+
+    content: [
+      { type:"p", text:"This Checkpoint completes Unit 8, mixing all six past-tense persons with concepts from every earlier chapter — including telling past and present verb forms apart." }
+    ],
+    vocabCategories: [],
+    exercises: [
+      {
+        id:"c8-ex1", type:"mcq", title:"Mixed Review",
+        instructions:"Questions pull from Chapters 15 and 16, plus a present-tense contrast from Chapter 9.",
+        items:[
+          { icon:"🧍", promptText:"أَنَا ___ إِلَى المَدْرَسَةِ أَمْسِ (went)", options:["أَذْهَبُ","ذَهَبْتُ"], correct:1 },
+          { icon:"👩", promptText:"أَنْتِ ___ رِسَالَةً (you, f., wrote)", options:["كَتَبْتِ","كَتَبْتَ"], correct:0 },
+          { promptText:"Which of these is present tense, not past?", options:["هُوَ يَذْهَبُ","هُوَ ذَهَبَ"], correct:0 },
+          { icon:"👥", promptText:"نَحْنُ ___ الدَّرْسَ (we read — past)", options:["نَقْرَأُ","قَرَأْنَا"], correct:1 }
+        ]
+      }
+    ],
+    speakingPhrases: [
+      { icon:"🏫", ar:"أَنَا ذَهَبْتُ إِلَى المَدْرَسَةِ", plain:"أنا ذهبت إلى المدرسة", translit:"anaa dhahabtu ilaa al-madrasati", meaning:"\"I went to school\"" }
+    ]
+  },
+
+  {
+    id: 25,
+    unit: "u9",
+    label: "Chapter 17",
+    difficulty: 10,
+    requires: 24,
+    icon: "🚫",
+    title: "Negation — Saying \"No\"",
+    arabicTitle: "النَّفْي",
+    desc: "Three different words for \"not,\" depending on what's being negated.",
+    locked: false,
+
+    content: [
+      { type:"p", text:"Arabic doesn't have one all-purpose word for \"not\" — the right word depends on the sentence. This chapter covers the three most essential: لَيْسَ (for \"is/are\" sentences), لَا (for present-tense verbs), and مَا (for past-tense verbs)." },
+      { type:"h", text:"لَيْسَ — Negating \"Is / Are\"" },
+      { type:"examples", items:[
+        { icon:"🧑‍🎓", ar:"هُوَ لَيْسَ طَالِبًا", translit:"huwa laysa taaliban", meaning:"He is not a student" },
+        { icon:"👩‍🏫", ar:"هِيَ لَيْسَتْ مُعَلِّمَةً", translit:"hiya laysat mu'allimatan", meaning:"She is not a teacher" }
+      ]},
+      { type:"pattern", ar:"لَيْسَ / لَيْسَتْ + الخَبَر", translit:"laysa / laysat + predicate", desc:"لَيْسَ itself conjugates like a past-tense verb (لَيْسَ for \"he/it,\" لَيْسَتْ for \"she/it\"), and the word after it usually ends in ــًا — that ending is a grammar detail you can recognize for now and study more deeply later." },
+      { type:"h", text:"لَا — Negating Present-Tense Verbs" },
+      { type:"examples", items:[
+        { icon:"🏫", ar:"أَنَا لَا أَذْهَبُ إِلَى المَدْرَسَةِ", translit:"anaa laa adh-habu ilaa al-madrasati", meaning:"I do not go to school" },
+        { icon:"✍️", ar:"هُوَ لَا يَكْتُبُ", translit:"huwa laa yaktubu", meaning:"He does not write" }
+      ]},
+      { type:"h", text:"مَا — Negating Past-Tense Verbs" },
+      { type:"examples", items:[
+        { icon:"🏫", ar:"أَنَا مَا ذَهَبْتُ", translit:"anaa maa dhahabtu", meaning:"I did not go" },
+        { icon:"✍️", ar:"هِيَ مَا كَتَبَتْ", translit:"hiya maa katabat", meaning:"She did not write" }
+      ]},
+      { type:"note", html:"You'll also see لَمْ used to negate the past in more formal Modern Standard Arabic writing — but it changes the verb's ending, which is a more advanced pattern saved for later. مَا is the simplest correct way to negate the past for now." }
+    ],
+
+    vocabCategories: [
+      { name:"Negation Words", words:[
+        {icon:"🚫", ar:"لَيْسَ", translit:"laysa", en:"Is not / are not"},
+        {icon:"🚫", ar:"لَا", translit:"laa", en:"Not / no (present tense)"},
+        {icon:"🚫", ar:"مَا", translit:"maa", en:"Not (past tense)"}
+      ]}
+    ],
+
+    exercises: [
+      {
+        id:"ch17-ex1", type:"mcq", title:"Exercise 1 — Pick the Right Negation",
+        instructions:"Choose the correct negation word for the sentence type.",
+        items:[
+          { icon:"🧑‍🎓", promptText:"هُوَ ___ طَالِبًا (he is not a student)", options:["لَيْسَ","لَا","مَا"], correct:0 },
+          { icon:"🏫", promptText:"أَنَا ___ أَذْهَبُ إِلَى المَدْرَسَةِ (I do not go)", options:["لَيْسَ","لَا","مَا"], correct:1 },
+          { icon:"✍️", promptText:"هِيَ ___ كَتَبَتْ (she did not write)", options:["لَيْسَتْ","لَا","مَا"], correct:2 },
+          { promptText:"Which negation word is used for past-tense verbs?", options:["لَيْسَ","لَا","مَا"], correct:2 }
+        ]
+      },
+      {
+        id:"ch17-ex2", type:"matching", title:"Exercise 2 — Click to Match",
+        instructions:"Tap a negation word, then tap what it negates.",
+        pairs:[
+          { left:"لَيْسَ", right:"\"Is / are\" sentences" },
+          { left:"لَا", right:"Present-tense verbs" },
+          { left:"مَا", right:"Past-tense verbs" }
+        ]
+      },
+      {
+        id:"ch17-ex3", type:"translate", title:"Exercise 3 — Translate to English",
+        instructions:"Type the English meaning of each sentence.",
+        items:[
+          { icon:"🧑‍🎓", ar:"هُوَ لَيْسَ طَالِبًا", keywords:["not","student"] },
+          { icon:"✍️", ar:"هُوَ لَا يَكْتُبُ", keywords:["not","write"] },
+          { icon:"🏫", ar:"أَنَا مَا ذَهَبْتُ", keywords:["did","not","go"] }
+        ]
+      },
+      {
+        id:"ch17-ex4", type:"sentence", title:"Exercise 4 — Build the Sentence",
+        instructions:"Tap the word chips in the correct order.",
+        items:[
+          { words:["طَالِبًا","لَيْسَ","هُوَ"], answer:["هُوَ","لَيْسَ","طَالِبًا"] },
+          { words:["ذَهَبْتُ","مَا","أَنَا"], answer:["أَنَا","مَا","ذَهَبْتُ"] }
+        ]
+      },
+      {
+        id:"ch17-ex5", type:"creative", title:"Exercise 5 — Create Your Own",
+        instructions:"Open-ended — no single right answer.",
+        items:[
+          { prompt:"Write one negated sentence with لَيْسَ, one with لَا, and one with مَا." }
+        ]
+      }
+    ],
+
+    speakingPhrases: [
+      { icon:"🧑‍🎓", ar:"هُوَ لَيْسَ طَالِبًا", plain:"هو ليس طالبًا", translit:"huwa laysa taaliban", meaning:"\"He is not a student\"" },
+      { icon:"🏫", ar:"أَنَا لَا أَذْهَبُ إِلَى المَدْرَسَةِ", plain:"أنا لا أذهب إلى المدرسة", translit:"anaa laa adh-habu ilaa al-madrasati", meaning:"\"I do not go to school\"" }
+    ]
+  },
+
+  {
+    id: 26,
+    unit: "u9",
+    label: "Chapter 18",
+    difficulty: 10,
+    requires: 25,
+    icon: "❓",
+    title: "Asking Questions — Question Words",
+    arabicTitle: "أَدَوَات الاسْتِفْهَام",
+    desc: "مَنْ، مَاذَا، أَيْنَ، مَتَى، كَيْفَ، لِمَاذَا — the six question words you'll use constantly.",
+    locked: false,
+
+    content: [
+      { type:"p", text:"Arabic questions are simple to form: just place a question word at the start of an ordinary sentence — there's no word-order flip like English \"do you...\"." },
+      { type:"h", text:"The Six Core Question Words" },
+      { type:"examples", items:[
+        { icon:"👤", ar:"مَنْ؟", translit:"man?", meaning:"who?" },
+        { icon:"📦", ar:"مَاذَا؟", translit:"maadhaa?", meaning:"what?" },
+        { icon:"📍", ar:"أَيْنَ؟", translit:"ayna?", meaning:"where?" },
+        { icon:"🕐", ar:"مَتَى؟", translit:"mataa?", meaning:"when?" },
+        { icon:"🤔", ar:"كَيْفَ؟", translit:"kayfa?", meaning:"how?" },
+        { icon:"❔", ar:"لِمَاذَا؟", translit:"limaadhaa?", meaning:"why?" }
+      ]},
+      { type:"h", text:"Using Them in Sentences" },
+      { type:"examples", items:[
+        { icon:"👤", ar:"مَنْ هَذَا؟", translit:"man hadhaa?", meaning:"Who is this?" },
+        { icon:"📍📖", ar:"أَيْنَ الكِتَابُ؟", translit:"ayna al-kitaabu?", meaning:"Where is the book?" },
+        { icon:"🕐🏫", ar:"مَتَى تَذْهَبُ إِلَى المَدْرَسَةِ؟", translit:"mataa tadh-habu ilaa al-madrasati?", meaning:"When do you (m.) go to school?" },
+        { icon:"🤔", ar:"كَيْفَ حَالُكَ؟", translit:"kayfa haaluka?", meaning:"How are you (m.)?" },
+        { icon:"❔", ar:"لِمَاذَا أَنْتَ هُنَا؟", translit:"limaadhaa anta hunaa?", meaning:"Why are you (m.) here?" }
+      ]},
+      { type:"wordcard", icon:"📍", ar:"هُنَا", translit:"hunaa", meaning:"here" },
+      { type:"note", html:"For plain yes/no questions (not \"who/what/where\"), Arabic just adds هَلْ to the front of an ordinary sentence — no new verb form needed: هَلْ أَنْتَ طَالِبٌ؟ (\"Are you a student?\")." }
+    ],
+
+    vocabCategories: [
+      { name:"Question Words", words:[
+        {icon:"👤", ar:"مَنْ", translit:"man", en:"Who?"},
+        {icon:"📦", ar:"مَاذَا", translit:"maadhaa", en:"What?"},
+        {icon:"📍", ar:"أَيْنَ", translit:"ayna", en:"Where?"},
+        {icon:"🕐", ar:"مَتَى", translit:"mataa", en:"When?"},
+        {icon:"🤔", ar:"كَيْفَ", translit:"kayfa", en:"How?"},
+        {icon:"❔", ar:"لِمَاذَا", translit:"limaadhaa", en:"Why?"},
+        {icon:"❓", ar:"هَلْ", translit:"hal", en:"(yes/no question marker)"}
+      ]},
+      { name:"New Vocabulary", words:[
+        {icon:"📍", ar:"هُنَا", translit:"hunaa", en:"Here"}
+      ]}
+    ],
+
+    exercises: [
+      {
+        id:"ch18-ex1", type:"mcq", title:"Exercise 1 — Pick the Right Question Word",
+        instructions:"Choose the correct question word for what's being asked.",
+        items:[
+          { icon:"📍📖", promptText:"___ الكِتَابُ؟ (Where is the book?)", options:["مَنْ","أَيْنَ","مَتَى"], correct:1 },
+          { icon:"👤", promptText:"___ هَذَا؟ (Who is this?)", options:["مَنْ","مَاذَا","كَيْفَ"], correct:0 },
+          { icon:"🤔", promptText:"___ حَالُكَ؟ (How are you?)", options:["لِمَاذَا","كَيْفَ","مَتَى"], correct:1 },
+          { promptText:"Which word turns a sentence into a yes/no question?", options:["هَلْ","مَاذَا","أَيْنَ"], correct:0 }
+        ]
+      },
+      {
+        id:"ch18-ex2", type:"matching", title:"Exercise 2 — Click to Match",
+        instructions:"Tap a question word, then tap its meaning.",
+        pairs:[
+          { left:"مَنْ", right:"Who?" },
+          { left:"أَيْنَ", right:"Where?" },
+          { left:"مَتَى", right:"When?" },
+          { left:"لِمَاذَا", right:"Why?" }
+        ]
+      },
+      {
+        id:"ch18-ex3", type:"translate", title:"Exercise 3 — Translate to English",
+        instructions:"Type the English meaning of each sentence.",
+        items:[
+          { icon:"📍📖", ar:"أَيْنَ الكِتَابُ؟", keywords:["where","book"] },
+          { icon:"🤔", ar:"كَيْفَ حَالُكَ؟", keywords:["how","are","you"] },
+          { icon:"❔", ar:"لِمَاذَا أَنْتَ هُنَا؟", keywords:["why","here"] }
+        ]
+      },
+      {
+        id:"ch18-ex4", type:"sentence", title:"Exercise 4 — Build the Sentence",
+        instructions:"Tap the word chips in the correct order.",
+        items:[
+          { words:["الكِتَابُ","أَيْنَ"], answer:["أَيْنَ","الكِتَابُ"] },
+          { words:["هَذَا","مَنْ"], answer:["مَنْ","هَذَا"] }
+        ]
+      },
+      {
+        id:"ch18-ex5", type:"creative", title:"Exercise 5 — Create Your Own",
+        instructions:"Open-ended — no single right answer.",
+        items:[
+          { prompt:"Write one question using each of the six question words: مَنْ، مَاذَا، أَيْنَ، مَتَى، كَيْفَ، لِمَاذَا." }
+        ]
+      }
+    ],
+
+    speakingPhrases: [
+      { icon:"🤔", ar:"كَيْفَ حَالُكَ؟", plain:"كيف حالك؟", translit:"kayfa haaluka?", meaning:"\"How are you?\"" },
+      { icon:"📍📖", ar:"أَيْنَ الكِتَابُ؟", plain:"أين الكتاب؟", translit:"ayna al-kitaabu?", meaning:"\"Where is the book?\"" },
+      { icon:"👤", ar:"مَنْ هَذَا؟", plain:"من هذا؟", translit:"man hadhaa?", meaning:"\"Who is this?\"" }
+    ]
+  },
+
+  {
+    id: 27,
+    unit: "u9",
+    label: "Checkpoint 9",
+    type: "checkpoint",
+    difficulty: 10,
+    requires: 26,
+    icon: "🔁",
+    title: "Review: Unit 9",
+    arabicTitle: "مُرَاجَعَة",
+    desc: "A cumulative check of negation and question words, mixed with earlier chapters.",
+    locked: false,
+
+    content: [
+      { type:"p", text:"This Checkpoint completes Unit 9, mixing negation (لَيْسَ / لَا / مَا) and the six question words with concepts from earlier chapters." }
+    ],
+    vocabCategories: [],
+    exercises: [
+      {
+        id:"c9-ex1", type:"mcq", title:"Mixed Review",
+        instructions:"Questions pull from Chapters 17 and 18, plus earlier vocabulary.",
+        items:[
+          { icon:"🧑‍🎓", promptText:"هُوَ ___ طَالِبًا (he is not a student)", options:["لَيْسَ","لَا","مَا"], correct:0 },
+          { promptText:"___ الكِتَابُ؟ (Where is the book?)", options:["مَنْ","أَيْنَ","مَاذَا"], correct:1 },
+          { icon:"✍️", promptText:"هِيَ ___ كَتَبَتْ (she did not write)", options:["لَيْسَتْ","لَا","مَا"], correct:2 },
+          { promptText:"Which word turns a sentence into a yes/no question?", options:["هَلْ","كَيْفَ","لِمَاذَا"], correct:0 }
+        ]
+      }
+    ],
+    speakingPhrases: [
+      { icon:"🤔", ar:"كَيْفَ حَالُكَ؟", plain:"كيف حالك؟", translit:"kayfa haaluka?", meaning:"\"How are you?\"" },
+      { icon:"🧑‍🎓", ar:"هُوَ لَيْسَ طَالِبًا", plain:"هو ليس طالبًا", translit:"huwa laysa taaliban", meaning:"\"He is not a student\"" }
+    ]
+  },
+
+  {
+    id: 28,
+    unit: "u10",
+    label: "Chapter 19",
+    difficulty: 11,
+    requires: 27,
+    icon: "🔢",
+    title: "Counting from One to Ten",
+    arabicTitle: "الأَعْدَاد مِنْ وَاحِد إِلَى عَشَرَة",
+    desc: "The ten cardinal numbers, and how to use them for basic counting and simple math.",
+    locked: false,
+
+    content: [
+      { type:"p", text:"Arabic numbers have some famously tricky grammar rules for later — but the numbers themselves are simple to learn first. This chapter covers the standalone form you use when reciting numbers on their own, like counting on your fingers or reading out a phone number." },
+      { type:"h", text:"Numbers 1–5" },
+      { type:"examples", items:[
+        { icon:"1️⃣", ar:"وَاحِد", translit:"waahid", meaning:"one" },
+        { icon:"2️⃣", ar:"اثْنَان", translit:"ithnaan", meaning:"two" },
+        { icon:"3️⃣", ar:"ثَلَاثَة", translit:"thalaatha", meaning:"three" },
+        { icon:"4️⃣", ar:"أَرْبَعَة", translit:"arba'a", meaning:"four" },
+        { icon:"5️⃣", ar:"خَمْسَة", translit:"khamsa", meaning:"five" }
+      ]},
+      { type:"h", text:"Numbers 6–10" },
+      { type:"examples", items:[
+        { icon:"6️⃣", ar:"سِتَّة", translit:"sitta", meaning:"six" },
+        { icon:"7️⃣", ar:"سَبْعَة", translit:"sab'a", meaning:"seven" },
+        { icon:"8️⃣", ar:"ثَمَانِيَة", translit:"thamaaniya", meaning:"eight" },
+        { icon:"9️⃣", ar:"تِسْعَة", translit:"tis'a", meaning:"nine" },
+        { icon:"🔟", ar:"عَشَرَة", translit:"'ashara", meaning:"ten" }
+      ]},
+      { type:"h", text:"Zero, and Simple Math" },
+      { type:"examples", items:[
+        { icon:"0️⃣", ar:"صِفْر", translit:"sifr", meaning:"zero" },
+        { icon:"➕", ar:"اثْنَان زَائِد ثَلَاثَة يُسَاوِي خَمْسَة", translit:"ithnaan zaa'id thalaatha yusaawi khamsa", meaning:"Two plus three equals five" }
+      ]},
+      { type:"note", html:"When these numbers are actually used to count a specific noun (\"three books,\" \"four chairs\"), Arabic does something unexpected: for 3–10, the number's gender flips to the <em>opposite</em> of the noun it counts, and the noun itself becomes plural and genitive. That's a distinctive rule worth a whole chapter of its own later — for now, just get comfortable reciting the numbers themselves." },
+      { type:"wordcard", icon:"🔟", ar:"عَشَرَة", translit:"'ashara", meaning:"ten" }
+    ],
+
+    vocabCategories: [
+      { name:"Numbers 1–5", words:[
+        {icon:"1️⃣", ar:"وَاحِد", translit:"waahid", en:"One"},
+        {icon:"2️⃣", ar:"اثْنَان", translit:"ithnaan", en:"Two"},
+        {icon:"3️⃣", ar:"ثَلَاثَة", translit:"thalaatha", en:"Three"},
+        {icon:"4️⃣", ar:"أَرْبَعَة", translit:"arba'a", en:"Four"},
+        {icon:"5️⃣", ar:"خَمْسَة", translit:"khamsa", en:"Five"}
+      ]},
+      { name:"Numbers 6–10", words:[
+        {icon:"6️⃣", ar:"سِتَّة", translit:"sitta", en:"Six"},
+        {icon:"7️⃣", ar:"سَبْعَة", translit:"sab'a", en:"Seven"},
+        {icon:"8️⃣", ar:"ثَمَانِيَة", translit:"thamaaniya", en:"Eight"},
+        {icon:"9️⃣", ar:"تِسْعَة", translit:"tis'a", en:"Nine"},
+        {icon:"🔟", ar:"عَشَرَة", translit:"'ashara", en:"Ten"}
+      ]},
+      { name:"Extra", words:[
+        {icon:"0️⃣", ar:"صِفْر", translit:"sifr", en:"Zero"},
+        {icon:"➕", ar:"زَائِد", translit:"zaa'id", en:"Plus"},
+        {icon:"🟰", ar:"يُسَاوِي", translit:"yusaawi", en:"Equals"}
+      ]}
+    ],
+
+    exercises: [
+      {
+        id:"ch19-ex1", type:"mcq", title:"Exercise 1 — Pick the Right Number",
+        instructions:"Choose the correct number word.",
+        items:[
+          { promptText:"Which number is خَمْسَة؟", options:["3","5","7"], correct:1 },
+          { promptText:"اثْنَان means...", options:["One","Two","Three"], correct:1 },
+          { promptText:"How do you say \"seven\"?", options:["سَبْعَة","سِتَّة","ثَمَانِيَة"], correct:0 },
+          { promptText:"صِفْر means...", options:["Zero","One","Ten"], correct:0 }
+        ]
+      },
+      {
+        id:"ch19-ex2", type:"matching", title:"Exercise 2 — Click to Match",
+        instructions:"Tap a number word, then tap its meaning.",
+        pairs:[
+          { left:"ثَلَاثَة", right:"Three" },
+          { left:"سِتَّة", right:"Six" },
+          { left:"تِسْعَة", right:"Nine" },
+          { left:"عَشَرَة", right:"Ten" }
+        ]
+      },
+      {
+        id:"ch19-ex3", type:"translate", title:"Exercise 3 — Translate to English",
+        instructions:"Type the English meaning of each item.",
+        items:[
+          { icon:"➕", ar:"اثْنَان زَائِد ثَلَاثَة يُسَاوِي خَمْسَة", keywords:["two","plus","three","five"] },
+          { ar:"سَبْعَة", keywords:["seven"] },
+          { ar:"صِفْر", keywords:["zero"] }
+        ]
+      },
+      {
+        id:"ch19-ex4", type:"sentence", title:"Exercise 4 — Build the Equation",
+        instructions:"Tap the word chips in the correct order.",
+        items:[
+          { words:["يُسَاوِي","ثَلَاثَة","زَائِد","اثْنَان","وَاحِد"], answer:["وَاحِد","زَائِد","اثْنَان","يُسَاوِي","ثَلَاثَة"] }
+        ]
+      },
+      {
+        id:"ch19-ex5", type:"creative", title:"Exercise 5 — Create Your Own",
+        instructions:"Open-ended — no single right answer.",
+        items:[
+          { prompt:"Recite the numbers 1–10 out loud in order, then write a simple addition sentence using زَائِد and يُسَاوِي with two numbers of your choice." }
+        ]
+      }
+    ],
+
+    speakingPhrases: [
+      { icon:"🔟", ar:"وَاحِد، اثْنَان، ثَلَاثَة", plain:"واحد، اثنان، ثلاثة", translit:"waahid, ithnaan, thalaatha...", meaning:"\"One, two, three...\"" },
+      { icon:"➕", ar:"اثْنَان زَائِد ثَلَاثَة يُسَاوِي خَمْسَة", plain:"اثنان زائد ثلاثة يساوي خمسة", translit:"ithnaan zaa'id thalaatha yusaawi khamsa", meaning:"\"Two plus three equals five\"" }
+    ]
+  },
+
+  {
+    id: 29,
+    unit: "u10",
+    label: "Chapter 20",
+    difficulty: 11,
+    requires: 28,
+    icon: "⚖️",
+    title: "Comparing Things — أَفْعَل مِنْ",
+    arabicTitle: "اسْمُ التَّفْضِيل",
+    desc: "Say that one thing is bigger, smaller, taller, or better than another, using the أَفْعَل pattern.",
+    locked: false,
+
+    content: [
+      { type:"p", text:"Arabic doesn't have a separate word for \"more\" — instead, it reshapes the adjective itself into a special pattern called أَفْعَل (af'al). The same word later doubles as \"the most ___\" once you add الـ in front." },
+      { type:"h", text:"The أَفْعَل Pattern" },
+      { type:"pattern", ar:"أَفْعَل مِنْ", translit:"af'al min", desc:"Most regular adjectives can be reshaped into this pattern to mean \"more ___.\" مِنْ (\"than\") introduces whatever is being compared to." },
+      { type:"h", text:"Common Comparatives" },
+      { type:"examples", items:[
+        { icon:"📏", ar:"كَبِير ← أَكْبَر", translit:"kabeer → akbar", meaning:"big → bigger" },
+        { icon:"📏", ar:"صَغِير ← أَصْغَر", translit:"sagheer → asghar", meaning:"small → smaller" },
+        { icon:"📏", ar:"طَوِيل ← أَطْوَل", translit:"taweel → atwal", meaning:"tall/long → taller/longer" },
+        { icon:"😍", ar:"جَمِيل ← أَجْمَل", translit:"jameel → ajmal", meaning:"beautiful → more beautiful" }
+      ]},
+      { type:"h", text:"Using It in a Sentence" },
+      { type:"examples", items:[
+        { icon:"🐘", ar:"الفِيلُ أَكْبَرُ مِنَ الْقِطَّةِ", translit:"al-feelu akbaru mina al-qittati", meaning:"The elephant is bigger than the cat" },
+        { icon:"👦👧", ar:"هُوَ أَطْوَلُ مِنْ أُخْتِهِ", translit:"huwa atwalu min ukhtihi", meaning:"He is taller than his sister" }
+      ]},
+      { type:"note", html:"For \"the most ___\" (the superlative), just add الـ in front: الأَكْبَر (\"the biggest\"). Also worth knowing: \"good\" doesn't follow the regular pattern — its comparative is the irregular <strong>أَحْسَن</strong> (ahsan, \"better\") rather than a made-up أَجْيَد." }
+    ],
+
+    vocabCategories: [
+      { name:"Comparative Adjectives", words:[
+        {icon:"📏", ar:"أَكْبَر", translit:"akbar", en:"Bigger"},
+        {icon:"📏", ar:"أَصْغَر", translit:"asghar", en:"Smaller"},
+        {icon:"📏", ar:"أَطْوَل", translit:"atwal", en:"Taller / longer"},
+        {icon:"😍", ar:"أَجْمَل", translit:"ajmal", en:"More beautiful"},
+        {icon:"👍", ar:"أَحْسَن", translit:"ahsan", en:"Better"}
+      ]},
+      { name:"Comparison Words", words:[
+        {icon:"↔️", ar:"مِنْ", translit:"min", en:"Than (in comparisons)"}
+      ]}
+    ],
+
+    exercises: [
+      {
+        id:"ch20-ex1", type:"mcq", title:"Exercise 1 — Pick the Right Comparative",
+        instructions:"Choose the correct comparative form or meaning.",
+        items:[
+          { promptText:"\"Bigger\" in Arabic is...", options:["أَكْبَر","كَبِير","الأَكْبَر"], correct:0 },
+          { icon:"🐘", promptText:"الفِيلُ ___ مِنَ الْقِطَّةِ (The elephant is bigger than the cat)", options:["أَكْبَر","أَصْغَر","أَطْوَل"], correct:0 },
+          { promptText:"The comparative of جَيِّد (good) is...", options:["أَجْيَد","أَحْسَن","أَجْمَل"], correct:1 },
+          { promptText:"To say \"the biggest,\" you...", options:["Add مِنْ after it","Add الـ in front of أَفْعَل","Repeat the word twice"], correct:1 }
+        ]
+      },
+      {
+        id:"ch20-ex2", type:"matching", title:"Exercise 2 — Click to Match",
+        instructions:"Tap a comparative, then tap its meaning.",
+        pairs:[
+          { left:"أَكْبَر", right:"Bigger" },
+          { left:"أَصْغَر", right:"Smaller" },
+          { left:"أَطْوَل", right:"Taller / longer" },
+          { left:"أَحْسَن", right:"Better" }
+        ]
+      },
+      {
+        id:"ch20-ex3", type:"translate", title:"Exercise 3 — Translate to English",
+        instructions:"Type the English meaning of each sentence.",
+        items:[
+          { icon:"🐘", ar:"الفِيلُ أَكْبَرُ مِنَ الْقِطَّةِ", keywords:["elephant","bigger","cat"] },
+          { icon:"👦👧", ar:"هُوَ أَطْوَلُ مِنْ أُخْتِهِ", keywords:["taller","sister"] },
+          { ar:"هَذَا الكِتَابُ أَحْسَن", keywords:["book","better"] }
+        ]
+      },
+      {
+        id:"ch20-ex4", type:"sentence", title:"Exercise 4 — Build the Sentence",
+        instructions:"Tap the word chips in the correct order.",
+        items:[
+          { words:["مِنَ الْقِطَّةِ","أَكْبَرُ","الفِيلُ"], answer:["الفِيلُ","أَكْبَرُ","مِنَ الْقِطَّةِ"] },
+          { words:["أُخْتِهِ","أَطْوَلُ","مِنْ","هُوَ"], answer:["هُوَ","أَطْوَلُ","مِنْ","أُخْتِهِ"] }
+        ]
+      },
+      {
+        id:"ch20-ex5", type:"creative", title:"Exercise 5 — Create Your Own",
+        instructions:"Open-ended — no single right answer.",
+        items:[
+          { prompt:"Write two comparison sentences using أَفْعَل مِنْ — compare two people or things you know by height, size, or age." }
+        ]
+      }
+    ],
+
+    speakingPhrases: [
+      { icon:"🐘", ar:"الفِيلُ أَكْبَرُ مِنَ الْقِطَّةِ", plain:"الفيل أكبر من القطة", translit:"al-feelu akbaru mina al-qittati", meaning:"\"The elephant is bigger than the cat\"" },
+      { icon:"👍", ar:"هَذَا أَحْسَن", plain:"هذا أحسن", translit:"haadhaa ahsan", meaning:"\"This is better\"" }
+    ]
+  },
+
+  {
+    id: 30,
+    unit: "u10",
+    label: "Checkpoint 10",
+    type: "checkpoint",
+    difficulty: 11,
+    requires: 29,
+    icon: "🔁",
+    title: "Review: Unit 10",
+    arabicTitle: "مُرَاجَعَة",
+    desc: "A cumulative check of numbers and comparison, mixed with earlier chapters.",
+    locked: false,
+
+    content: [
+      { type:"p", text:"This Checkpoint completes Unit 10, mixing numbers 1–10 and the أَفْعَل comparative pattern with concepts from earlier chapters — including question words and negation." }
+    ],
+    vocabCategories: [],
+    exercises: [
+      {
+        id:"c10-ex1", type:"mcq", title:"Mixed Review",
+        instructions:"Questions pull from Chapters 19 and 20, plus earlier vocabulary.",
+        items:[
+          { promptText:"Which number is سَبْعَة؟", options:["5","6","7"], correct:2 },
+          { icon:"🐘", promptText:"الفِيلُ ___ مِنَ الْقِطَّةِ", options:["أَكْبَر","لَيْسَ","مَاذَا"], correct:0 },
+          { promptText:"___ حَالُكَ؟ (How are you?)", options:["مَنْ","كَيْفَ","مَتَى"], correct:1 },
+          { promptText:"عَشَرَة means...", options:["Nine","Ten","Zero"], correct:1 }
+        ]
+      }
+    ],
+    speakingPhrases: [
+      { icon:"🔟", ar:"وَاحِد، اثْنَان، ثَلَاثَة", plain:"واحد، اثنان، ثلاثة", translit:"waahid, ithnaan, thalaatha...", meaning:"\"One, two, three...\"" },
+      { icon:"🐘", ar:"الفِيلُ أَكْبَرُ مِنَ الْقِطَّةِ", plain:"الفيل أكبر من القطة", translit:"al-feelu akbaru mina al-qittati", meaning:"\"The elephant is bigger than the cat\"" }
+    ]
+  },
+
+  {
+    id: 31,
+    unit: "u11",
+    label: "Chapter 21",
+    difficulty: 12,
+    requires: 30,
+    icon: "🚧",
+    title: "More Grammar — Coming Soon",
+    arabicTitle: "قَرِيبًا",
+    desc: "The next chapter is being written — كَانَ and her sisters, sound plurals in depth, and more classical grammar are on the way.",
+    locked: true
+  },
 
   // ===== SPOKEN ARABIC TRACK (Emirati / Gulf) =====
   // Everyday conversational phrases, organized by situation rather than
@@ -1579,8 +3062,8 @@ const chapters = [
       { type:"p", text:"This track is different from the Classical/Qur'anic track: instead of formal grammar rules, you'll learn phrases the way people actually say them day to day — here, in Emirati/Gulf Arabic (اللَّهْجَة الإِمَارَاتِيَّة / الخَلِيجِيَّة). Even simple greetings sound noticeably different from Egyptian or Levantine Arabic, which is exactly why this needs its own track rather than reusing the Classical one." },
       { type:"h", text:"Universal Greeting" },
       { type:"examples", items:[
-        { icon:"👋", ar:"السَّلَام عَلَيْكُم", translit:"as-salaamu 3alaykum", meaning:"Peace be upon you (hello — used everywhere, formal or casual)" },
-        { icon:"👋", ar:"وَعَلَيْكُم السَّلَام", translit:"wa 3alaykum as-salaam", meaning:"And peace be upon you (the standard reply)" }
+        { icon:"👋", ar:"السَّلَام عَلَيْكُم", translit:"as-salaamu 'alaykum", meaning:"Peace be upon you (hello — used everywhere, formal or casual)" },
+        { icon:"👋", ar:"وَعَلَيْكُم السَّلَام", translit:"wa 'alaykum as-salaam", meaning:"And peace be upon you (the standard reply)" }
       ]},
       { type:"h", text:"Casual Hello (Gulf style)" },
       { type:"examples", items:[
@@ -1609,7 +3092,7 @@ const chapters = [
       ]},
       { type:"h", text:"Saying Goodbye" },
       { type:"examples", items:[
-        { icon:"👋", ar:"مَع السَّلامة", translit:"ma3 as-salaama", meaning:"Goodbye" },
+        { icon:"👋", ar:"مَع السَّلامة", translit:"ma' as-salaama", meaning:"Goodbye" },
         { icon:"👋", ar:"بِالسَّلامة", translit:"bis-salaama", meaning:"Goodbye (a common Gulf send-off, said to the person leaving)" }
       ]},
       { type:"note", html:"<strong>Compare to the Classical track:</strong> \"How are you?\" in formal/Classical Arabic is كَيْفَ حَالُكَ (kayfa haaluka) — grammatically correct everywhere, but nobody greets a friend that way. This is exactly why the two tracks teach different things: Classical for reading and formal contexts, Spoken for talking to actual people day to day." },
@@ -1619,8 +3102,8 @@ const chapters = [
 
     vocabCategories: [
       { name:"Greetings", words:[
-        {icon:"👋", ar:"السَّلَام عَلَيْكُم", translit:"as-salaamu 3alaykum", en:"Hello (peace be upon you)"},
-        {icon:"👋", ar:"وَعَلَيْكُم السَّلَام", translit:"wa 3alaykum as-salaam", en:"Hello (reply)"},
+        {icon:"👋", ar:"السَّلَام عَلَيْكُم", translit:"as-salaamu 'alaykum", en:"Hello (peace be upon you)"},
+        {icon:"👋", ar:"وَعَلَيْكُم السَّلَام", translit:"wa 'alaykum as-salaam", en:"Hello (reply)"},
         {icon:"🙌", ar:"مَرْحَبَا", translit:"marhaba", en:"Hello"},
         {icon:"🙌", ar:"هَلَا وَغَلَا", translit:"hala wa ghala", en:"Warm welcome"}
       ]},
@@ -1641,7 +3124,7 @@ const chapters = [
         {icon:"🙏", ar:"مِن فَضْلَك", translit:"min fadlak", en:"Please"}
       ]},
       { name:"Goodbye", words:[
-        {icon:"👋", ar:"مَع السَّلامة", translit:"ma3 as-salaama", en:"Goodbye"},
+        {icon:"👋", ar:"مَع السَّلامة", translit:"ma' as-salaama", en:"Goodbye"},
         {icon:"👋", ar:"بِالسَّلامة", translit:"bis-salaama", en:"Goodbye (send-off)"}
       ]}
     ],
@@ -1693,10 +3176,46 @@ const chapters = [
     ],
 
     speakingPhrases: [
-      { icon:"👋", ar:"السَّلَام عَلَيْكُم", plain:"السلام عليكم", translit:"as-salaamu 3alaykum", meaning:"\"Hello\"" },
+      { icon:"👋", ar:"السَّلَام عَلَيْكُم", plain:"السلام عليكم", translit:"as-salaamu 'alaykum", meaning:"\"Hello\"" },
       { icon:"❓", ar:"شَحَالَك؟", plain:"شحالك", translit:"shhaalak?", meaning:"\"How are you?\"" },
       { icon:"👍", ar:"زَين، الحَمْدُ لله", plain:"زين الحمد لله", translit:"zain, il-hamdu lillah", meaning:"\"Good, thank God\"" },
       { icon:"👋", ar:"بِالسَّلامة", plain:"بالسلامة", translit:"bis-salaama", meaning:"\"Goodbye\"" }
+    ]
+  },
+
+  {
+    id: 150,
+    track: "spoken",
+    unit: "s-u1",
+    label: "Checkpoint 1",
+    type: "checkpoint",
+    difficulty: 1,
+    requires: 100,
+    icon: "🔁",
+    title: "Review: Unit 1",
+    arabicTitle: "مُرَاجَعَة",
+    desc: "A cumulative check of greetings and small talk from Chapter 1.",
+    locked: false,
+
+    content: [
+      { type:"p", text:"This Checkpoint completes Unit 1, reviewing the core greetings, small talk, and polite phrases from Chapter 1." }
+    ],
+    vocabCategories: [],
+    exercises: [
+      {
+        id:"spc1-ex1", type:"mcq", title:"Mixed Review",
+        instructions:"Questions pull from Chapter 1.",
+        items:[
+          { promptText:"السَّلَام عَلَيْكُم means...", options:["Goodbye","Hello (peace be upon you)","Thanks"], correct:1 },
+          { icon:"❓", promptText:"شَحَالَك؟ means...", options:["What's your name?","How are you? (to male)","Where are you from?"], correct:1 },
+          { promptText:"مَشْكُور means...", options:["Please","Thanks","Sorry"], correct:1 },
+          { promptText:"بِالسَّلامة means...", options:["Hello","Please","Goodbye"], correct:2 }
+        ]
+      }
+    ],
+    speakingPhrases: [
+      { icon:"👋", ar:"السَّلَام عَلَيْكُم", plain:"السلام عليكم", translit:"as-salaamu 'alaykum", meaning:"\"Hello\"" },
+      { icon:"❓", ar:"شَحَالَك؟", plain:"شحالك", translit:"shhaalak?", meaning:"\"How are you?\"" }
     ]
   },
 
@@ -1706,7 +3225,7 @@ const chapters = [
     unit: "s-u2",
     label: "Chapter 2",
     difficulty: 2,
-    requires: 100,
+    requires: 150,
     icon: "🛍️",
     title: "Numbers & Shopping",
     arabicTitle: "الأَرْقَام وَالتَّسَوُّق",
@@ -1720,15 +3239,15 @@ const chapters = [
         { icon:"1️⃣", ar:"وَاحِد", translit:"waahid", meaning:"one" },
         { icon:"2️⃣", ar:"اِثْنَين", translit:"ithnain", meaning:"two" },
         { icon:"3️⃣", ar:"ثَلَاثَة", translit:"thalaatha", meaning:"three" },
-        { icon:"4️⃣", ar:"أَرْبَعَة", translit:"arba3a", meaning:"four" },
+        { icon:"4️⃣", ar:"أَرْبَعَة", translit:"arba'a", meaning:"four" },
         { icon:"5️⃣", ar:"خَمْسَة", translit:"khamsa", meaning:"five" }
       ]},
       { type:"examples", items:[
         { icon:"6️⃣", ar:"سِتَّة", translit:"sitta", meaning:"six" },
-        { icon:"7️⃣", ar:"سَبْعَة", translit:"sab3a", meaning:"seven" },
+        { icon:"7️⃣", ar:"سَبْعَة", translit:"sab'a", meaning:"seven" },
         { icon:"8️⃣", ar:"ثَمَانْيَة", translit:"thamaanya", meaning:"eight" },
-        { icon:"9️⃣", ar:"تِسْعَة", translit:"tis3a", meaning:"nine" },
-        { icon:"🔟", ar:"عَشَرَة", translit:"3ashara", meaning:"ten" }
+        { icon:"9️⃣", ar:"تِسْعَة", translit:"tis'a", meaning:"nine" },
+        { icon:"🔟", ar:"عَشَرَة", translit:"'ashara", meaning:"ten" }
       ]},
       { type:"h", text:"Asking the Price" },
       { type:"examples", items:[
@@ -1749,15 +3268,15 @@ const chapters = [
         {icon:"1️⃣", ar:"وَاحِد", translit:"waahid", en:"One"},
         {icon:"2️⃣", ar:"اِثْنَين", translit:"ithnain", en:"Two"},
         {icon:"3️⃣", ar:"ثَلَاثَة", translit:"thalaatha", en:"Three"},
-        {icon:"4️⃣", ar:"أَرْبَعَة", translit:"arba3a", en:"Four"},
+        {icon:"4️⃣", ar:"أَرْبَعَة", translit:"arba'a", en:"Four"},
         {icon:"5️⃣", ar:"خَمْسَة", translit:"khamsa", en:"Five"}
       ]},
       { name:"Numbers 6–10", words:[
         {icon:"6️⃣", ar:"سِتَّة", translit:"sitta", en:"Six"},
-        {icon:"7️⃣", ar:"سَبْعَة", translit:"sab3a", en:"Seven"},
+        {icon:"7️⃣", ar:"سَبْعَة", translit:"sab'a", en:"Seven"},
         {icon:"8️⃣", ar:"ثَمَانْيَة", translit:"thamaanya", en:"Eight"},
-        {icon:"9️⃣", ar:"تِسْعَة", translit:"tis3a", en:"Nine"},
-        {icon:"🔟", ar:"عَشَرَة", translit:"3ashara", en:"Ten"}
+        {icon:"9️⃣", ar:"تِسْعَة", translit:"tis'a", en:"Nine"},
+        {icon:"🔟", ar:"عَشَرَة", translit:"'ashara", en:"Ten"}
       ]},
       { name:"Shopping Phrases", words:[
         {icon:"❓", ar:"بِكَم هَذَا؟", translit:"bikam hadha?", en:"How much is this?"},
@@ -1819,6 +3338,1081 @@ const chapters = [
       { icon:"💰", ar:"غَالِي شَوَي", plain:"غالي شوي", translit:"ghaali shway", meaning:"\"A bit expensive\"" },
       { icon:"🤝", ar:"مُمْكِن أَقَل؟", plain:"ممكن أقل", translit:"mumkin agal?", meaning:"\"Can you go lower?\"" }
     ]
+  },
+
+  {
+    id: 151,
+    track: "spoken",
+    unit: "s-u2",
+    label: "Checkpoint 2",
+    type: "checkpoint",
+    difficulty: 2,
+    requires: 101,
+    icon: "🔁",
+    title: "Review: Unit 2",
+    arabicTitle: "مُرَاجَعَة",
+    desc: "A cumulative check of numbers and shopping phrases from Chapter 2.",
+    locked: false,
+
+    content: [
+      { type:"p", text:"This Checkpoint completes Unit 2, mixing numbers 1–10 with the shopping phrases from Chapter 2 — plus a touch of Chapter 1's greetings." }
+    ],
+    vocabCategories: [],
+    exercises: [
+      {
+        id:"spc2-ex1", type:"mcq", title:"Mixed Review",
+        instructions:"Questions pull from Chapter 2, plus a greeting from Chapter 1.",
+        items:[
+          { promptText:"Which number is سِتَّة؟", options:["5","6","7"], correct:1 },
+          { icon:"❓", promptText:"بِكَم هَذَا؟ means...", options:["Where is this?","How much is this?","What is this?"], correct:1 },
+          { promptText:"غَالِي means...", options:["Cheap","Expensive","Free"], correct:1 },
+          { promptText:"أَبْغَى means...", options:["I have","I want","I go"], correct:1 }
+        ]
+      }
+    ],
+    speakingPhrases: [
+      { icon:"1️⃣", ar:"وَاحِد، اِثْنَين، ثَلَاثَة", plain:"واحد اثنين ثلاثة", translit:"waahid, ithnain, thalaatha", meaning:"\"One, two, three\"" },
+      { icon:"❓", ar:"بِكَم هَذَا؟", plain:"بكم هذا", translit:"bikam hadha?", meaning:"\"How much is this?\"" }
+    ]
+  },
+
+  {
+    id: 102,
+    track: "spoken",
+    unit: "s-u3",
+    label: "Chapter 3",
+    difficulty: 3,
+    requires: 151,
+    icon: "🧭",
+    title: "Asking for Directions",
+    arabicTitle: "السُّؤَال عَنِ الاتِّجَاهَات",
+    desc: "Find your way around town — asking where things are and understanding directions in Gulf Arabic.",
+    locked: false,
+
+    content: [
+      { type:"p", text:"In everyday Gulf speech, people usually ask \"where?\" with وين (wain) rather than the Classical أَيْنَ — you'll hear وين constantly, from taxi drivers to shopkeepers." },
+      { type:"h", text:"Asking Where Something Is" },
+      { type:"examples", items:[
+        { icon:"❓", ar:"وَيْن المَطْعَم؟", translit:"wain al-mat'am?", meaning:"Where's the restaurant?" },
+        { icon:"❓", ar:"وَيْن أَقْرَب بَنْك؟", translit:"wain agrab bank?", meaning:"Where's the nearest bank?" }
+      ]},
+      { type:"h", text:"Giving & Understanding Directions" },
+      { type:"examples", items:[
+        { icon:"➡️", ar:"يَمِين", translit:"yameen", meaning:"right" },
+        { icon:"⬅️", ar:"شِمَال", translit:"shimaal", meaning:"left" },
+        { icon:"⬆️", ar:"دُغْرِي", translit:"dughri", meaning:"straight ahead" },
+        { icon:"📍", ar:"قَرِيب", translit:"gareeb", meaning:"near" },
+        { icon:"🚶", ar:"بَعِيد", translit:"ba'eed", meaning:"far" }
+      ]},
+      { type:"h", text:"Putting It Together" },
+      { type:"examples", items:[
+        { icon:"🚦", ar:"بَعْد الإِشَارَة", translit:"ba'ad al-ishaara", meaning:"After the traffic light" },
+        { icon:"🛣️", ar:"أَوَّل شَارِع يَمِين", translit:"awwal shaari' yameen", meaning:"First street on the right" },
+        { icon:"✅", ar:"هُوَ قَرِيب مِن هِنِي", translit:"huwa gareeb min hini", meaning:"It's close to here" }
+      ]},
+      { type:"note", html:"<strong>هِنِي (hini)</strong> is the Gulf word for \"here\" — you'll also hear the more Classical هُنَا (hunaa) understood everywhere, but هِنِي is what locals actually say." }
+    ],
+
+    vocabCategories: [
+      { name:"Directions", words:[
+        {icon:"➡️", ar:"يَمِين", translit:"yameen", en:"Right"},
+        {icon:"⬅️", ar:"شِمَال", translit:"shimaal", en:"Left"},
+        {icon:"⬆️", ar:"دُغْرِي", translit:"dughri", en:"Straight ahead"},
+        {icon:"📍", ar:"قَرِيب", translit:"gareeb", en:"Near"},
+        {icon:"🚶", ar:"بَعِيد", translit:"ba'eed", en:"Far"}
+      ]},
+      { name:"Places", words:[
+        {icon:"🍽️", ar:"مَطْعَم", translit:"mat'am", en:"Restaurant"},
+        {icon:"🏦", ar:"بَنْك", translit:"bank", en:"Bank"},
+        {icon:"🏥", ar:"مُسْتَشْفَى", translit:"mustashfa", en:"Hospital"},
+        {icon:"🛒", ar:"سُوق", translit:"soog", en:"Market"}
+      ]},
+      { name:"Useful Phrases", words:[
+        {icon:"❓", ar:"وَيْن...؟", translit:"wain...?", en:"Where is...?"},
+        {icon:"🚦", ar:"بَعْد الإِشَارَة", translit:"ba'ad al-ishaara", en:"After the traffic light"},
+        {icon:"📍", ar:"هِنِي", translit:"hini", en:"Here"}
+      ]}
+    ],
+
+    exercises: [
+      {
+        id:"sp3-ex1", type:"mcq", title:"Exercise 1 — Multiple Choice",
+        instructions:"Choose the correct word or meaning.",
+        items:[
+          { promptText:"وَيْن means...", options:["When?","Where?","Why?"], correct:1 },
+          { promptText:"How do you say \"left\"?", options:["يَمِين","شِمَال","دُغْرِي"], correct:1 },
+          { promptText:"دُغْرِي means...", options:["Straight ahead","Turn around","Very far"], correct:0 },
+          { promptText:"مَطْعَم means...", options:["Bank","Hospital","Restaurant"], correct:2 }
+        ]
+      },
+      {
+        id:"sp3-ex2", type:"matching", title:"Exercise 2 — Click to Match",
+        instructions:"Tap a word, then tap its meaning.",
+        pairs:[
+          { left:"قَرِيب", right:"Near" },
+          { left:"بَعِيد", right:"Far" },
+          { left:"سُوق", right:"Market" }
+        ]
+      },
+      {
+        id:"sp3-ex3", type:"translate", title:"Exercise 3 — Translate to English",
+        instructions:"Type the English meaning of each phrase.",
+        items:[
+          { icon:"❓", ar:"وَيْن المَطْعَم؟", keywords:["where","restaurant"] },
+          { icon:"🛣️", ar:"أَوَّل شَارِع يَمِين", keywords:["street","right"] },
+          { icon:"✅", ar:"هُوَ قَرِيب مِن هِنِي", keywords:["close","near","here"] }
+        ]
+      },
+      {
+        id:"sp3-ex4", type:"sentence", title:"Exercise 4 — Build the Phrase",
+        instructions:"Tap the word chips in the correct order.",
+        items:[
+          { words:["المَطْعَم؟","وَيْن"], answer:["وَيْن","المَطْعَم؟"] }
+        ]
+      },
+      {
+        id:"sp3-ex5", type:"creative", title:"Exercise 5 — Create Your Own",
+        instructions:"Open-ended — no single right answer.",
+        items:[
+          { prompt:"Write directions from your home to the nearest market, using at least three direction words." },
+          { prompt:"Write a short exchange: ask where the bank is, and have someone answer with a direction." }
+        ]
+      }
+    ],
+
+    speakingPhrases: [
+      { icon:"❓", ar:"وَيْن المَطْعَم؟", plain:"وين المطعم", translit:"wain al-mat'am?", meaning:"\"Where's the restaurant?\"" },
+      { icon:"➡️", ar:"أَوَّل شَارِع يَمِين", plain:"أول شارع يمين", translit:"awwal shaari' yameen", meaning:"\"First street on the right\"" },
+      { icon:"⬆️", ar:"دُغْرِي وَبَعْدَين يَمِين", plain:"دغري وبعدين يمين", translit:"dughri w ba'dain yameen", meaning:"\"Straight, then right\"" },
+      { icon:"✅", ar:"هُوَ قَرِيب مِن هِنِي", plain:"هو قريب من هني", translit:"huwa gareeb min hini", meaning:"\"It's close to here\"" }
+    ]
+  },
+
+  {
+    id: 152,
+    track: "spoken",
+    unit: "s-u3",
+    label: "Checkpoint 3",
+    type: "checkpoint",
+    difficulty: 3,
+    requires: 102,
+    icon: "🔁",
+    title: "Review: Unit 3",
+    arabicTitle: "مُرَاجَعَة",
+    desc: "A cumulative check of directions from Chapter 3.",
+    locked: false,
+
+    content: [
+      { type:"p", text:"This Checkpoint completes Unit 3, reviewing direction words and place names from Chapter 3, mixed with earlier vocabulary." }
+    ],
+    vocabCategories: [],
+    exercises: [
+      {
+        id:"spc3-ex1", type:"mcq", title:"Mixed Review",
+        instructions:"Questions pull from Chapter 3.",
+        items:[
+          { promptText:"وَيْن means...", options:["When?","Where?","Why?"], correct:1 },
+          { promptText:"دُغْرِي means...", options:["Straight ahead","Turn around","Very far"], correct:0 },
+          { promptText:"مَطْعَم means...", options:["Bank","Hospital","Restaurant"], correct:2 },
+          { promptText:"هِنِي means...", options:["There","Here","Near"], correct:1 }
+        ]
+      }
+    ],
+    speakingPhrases: [
+      { icon:"❓", ar:"وَيْن المَطْعَم؟", plain:"وين المطعم", translit:"wain al-mat'am?", meaning:"\"Where's the restaurant?\"" },
+      { icon:"✅", ar:"هُوَ قَرِيب مِن هِنِي", plain:"هو قريب من هني", translit:"huwa gareeb min hini", meaning:"\"It's close to here\"" }
+    ]
+  },
+
+  {
+    id: 103,
+    track: "spoken",
+    unit: "s-u4",
+    label: "Chapter 4",
+    difficulty: 3,
+    requires: 152,
+    icon: "☕",
+    title: "At the Café",
+    arabicTitle: "فِي المَقْهَى",
+    desc: "Order food and drinks, and ask politely — everyday café Arabic.",
+    locked: false,
+
+    content: [
+      { type:"p", text:"Ordering food and drinks is one of the first things you'll do out and about — a handful of phrases cover almost every situation." },
+      { type:"h", text:"Ordering" },
+      { type:"examples", items:[
+        { icon:"🙏", ar:"أَبْغَى قَهْوَة", translit:"abgha gahwa", meaning:"I want coffee" },
+        { icon:"🙏", ar:"أَبْغَى شَاي", translit:"abgha shay", meaning:"I want tea" },
+        { icon:"🙏", ar:"أَبْغَى مَاء", translit:"abgha maa'", meaning:"I want water" }
+      ]},
+      { type:"h", text:"Food Words" },
+      { type:"examples", items:[
+        { icon:"🍚", ar:"عَيْش", translit:"aish", meaning:"rice" },
+        { icon:"🍗", ar:"دَجَاج", translit:"dajaaj", meaning:"chicken" },
+        { icon:"🥩", ar:"لَحَم", translit:"laham", meaning:"meat" },
+        { icon:"🍞", ar:"خُبْز", translit:"khubz", meaning:"bread" }
+      ]},
+      { type:"note", html:"<strong>عَيْش</strong> is a fun regional divergence: in the Gulf it means \"rice,\" but in Egyptian Arabic the very same word means \"bread\" — worth knowing if you ever travel between the two." },
+      { type:"h", text:"Useful Phrases" },
+      { type:"examples", items:[
+        { icon:"🧾", ar:"الحِسَاب لَو سَمَحْت", translit:"al-hisaab law samaht", meaning:"The bill, please" },
+        { icon:"🚫🍬", ar:"بِدُون سُكَّر", translit:"bidoon sukkar", meaning:"Without sugar" },
+        { icon:"➕", ar:"زِيَادَة", translit:"ziyaada", meaning:"Extra / more" }
+      ]},
+      { type:"note", html:"<strong>لَو سَمَحْت</strong> (\"if you would permit\") is the everyday way to say \"please\" — polite and used constantly, in cafés, taxis, and shops alike." }
+    ],
+
+    vocabCategories: [
+      { name:"Drinks", words:[
+        {icon:"☕", ar:"قَهْوَة", translit:"gahwa", en:"Coffee"},
+        {icon:"🍵", ar:"شَاي", translit:"shay", en:"Tea"},
+        {icon:"💧", ar:"مَاء", translit:"maa'", en:"Water"}
+      ]},
+      { name:"Food", words:[
+        {icon:"🍚", ar:"عَيْش", translit:"aish", en:"Rice (Gulf)"},
+        {icon:"🍗", ar:"دَجَاج", translit:"dajaaj", en:"Chicken"},
+        {icon:"🥩", ar:"لَحَم", translit:"laham", en:"Meat"},
+        {icon:"🍞", ar:"خُبْز", translit:"khubz", en:"Bread"}
+      ]},
+      { name:"Café Phrases", words:[
+        {icon:"🙏", ar:"أَبْغَى...", translit:"abgha...", en:"I want..."},
+        {icon:"🧾", ar:"الحِسَاب لَو سَمَحْت", translit:"al-hisaab law samaht", en:"The bill, please"},
+        {icon:"🚫🍬", ar:"بِدُون سُكَّر", translit:"bidoon sukkar", en:"Without sugar"}
+      ]}
+    ],
+
+    exercises: [
+      {
+        id:"sp4-ex1", type:"mcq", title:"Exercise 1 — Multiple Choice",
+        instructions:"Choose the correct word or meaning.",
+        items:[
+          { promptText:"How do you say \"I want coffee\"?", options:["أَبْغَى قَهْوَة","أَبْغَى شَاي","أَبْغَى مَاء"], correct:0 },
+          { promptText:"عَيْش means, in the Gulf...", options:["Bread","Rice","Chicken"], correct:1 },
+          { promptText:"الحِسَاب means...", options:["The menu","The bill","The table"], correct:1 },
+          { promptText:"بِدُون سُكَّر means...", options:["With sugar","Without sugar","Extra sugar"], correct:1 }
+        ]
+      },
+      {
+        id:"sp4-ex2", type:"matching", title:"Exercise 2 — Click to Match",
+        instructions:"Tap a word, then tap its meaning.",
+        pairs:[
+          { left:"قَهْوَة", right:"Coffee" },
+          { left:"دَجَاج", right:"Chicken" },
+          { left:"خُبْز", right:"Bread" }
+        ]
+      },
+      {
+        id:"sp4-ex3", type:"translate", title:"Exercise 3 — Translate to English",
+        instructions:"Type the English meaning of each phrase.",
+        items:[
+          { icon:"🙏", ar:"أَبْغَى شَاي", keywords:["want","tea"] },
+          { icon:"🧾", ar:"الحِسَاب لَو سَمَحْت", keywords:["bill"] },
+          { icon:"➕", ar:"زِيَادَة", keywords:["extra","more"] }
+        ]
+      },
+      {
+        id:"sp4-ex4", type:"sentence", title:"Exercise 4 — Build the Phrase",
+        instructions:"Tap the word chips in the correct order.",
+        items:[
+          { words:["قَهْوَة","أَبْغَى"], answer:["أَبْغَى","قَهْوَة"] }
+        ]
+      },
+      {
+        id:"sp4-ex5", type:"creative", title:"Exercise 5 — Create Your Own",
+        instructions:"Open-ended — no single right answer.",
+        items:[
+          { prompt:"Write a short café order: what you want to drink, one food item, and ask for the bill." }
+        ]
+      }
+    ],
+
+    speakingPhrases: [
+      { icon:"🙏", ar:"أَبْغَى قَهْوَة", plain:"أبغى قهوة", translit:"abgha gahwa", meaning:"\"I want coffee\"" },
+      { icon:"🚫🍬", ar:"بِدُون سُكَّر", plain:"بدون سكر", translit:"bidoon sukkar", meaning:"\"Without sugar\"" },
+      { icon:"🧾", ar:"الحِسَاب لَو سَمَحْت", plain:"الحساب لو سمحت", translit:"al-hisaab law samaht", meaning:"\"The bill, please\"" }
+    ]
+  },
+
+  {
+    id: 104,
+    track: "spoken",
+    unit: "s-u4",
+    label: "Chapter 5",
+    difficulty: 3,
+    requires: 103,
+    icon: "👨‍👩‍👧",
+    title: "Family & Small Talk",
+    arabicTitle: "العَائِلَة وَأَحَادِيث بَسِيطَة",
+    desc: "Talk about your family and make simple small talk — the questions you'll get asked constantly.",
+    locked: false,
+
+    content: [
+      { type:"p", text:"A few questions come up in almost every first conversation — your name, where you're from, and your family. This chapter covers both sides: asking and answering." },
+      { type:"h", text:"Common Small-Talk Questions" },
+      { type:"examples", items:[
+        { icon:"❓", ar:"شُو اسْمَك؟", translit:"shu ismak?", meaning:"What's your name?" },
+        { icon:"❓", ar:"مِن وَيْن أَنْتَ؟", translit:"min wain anta?", meaning:"Where are you from?" }
+      ]},
+      { type:"h", text:"Family Words" },
+      { type:"examples", items:[
+        { icon:"👨", ar:"أَب", translit:"ab", meaning:"father" },
+        { icon:"👩", ar:"أُم", translit:"umm", meaning:"mother" },
+        { icon:"👦", ar:"أَخ", translit:"akh", meaning:"brother" },
+        { icon:"👧", ar:"أُخْت", translit:"ukht", meaning:"sister" },
+        { icon:"👶", ar:"وَلَد", translit:"walad", meaning:"son / boy" },
+        { icon:"👧", ar:"بِنْت", translit:"bint", meaning:"daughter / girl" }
+      ]},
+      { type:"h", text:"Talking About Your Family" },
+      { type:"examples", items:[
+        { icon:"👧👧", ar:"عِنْدِي أُخْتَين", translit:"'indi ukhtain", meaning:"I have two sisters" },
+        { icon:"👦", ar:"عِنْدِي أَخ وَاحِد", translit:"'indi akh waahid", meaning:"I have one brother" }
+      ]},
+      { type:"note", html:"<strong>عِنْدِي</strong> (literally \"at me\") is how Arabic says \"I have\" — used constantly, far more often than any verb. Notice أُخْتَين uses the dual ending ـَين you just learned in the last chapter — real proof it comes up right away!" }
+    ],
+
+    vocabCategories: [
+      { name:"Family", words:[
+        {icon:"👨", ar:"أَب", translit:"ab", en:"Father"},
+        {icon:"👩", ar:"أُم", translit:"umm", en:"Mother"},
+        {icon:"👦", ar:"أَخ", translit:"akh", en:"Brother"},
+        {icon:"👧", ar:"أُخْت", translit:"ukht", en:"Sister"},
+        {icon:"👶", ar:"وَلَد", translit:"walad", en:"Son / boy"},
+        {icon:"👧", ar:"بِنْت", translit:"bint", en:"Daughter / girl"}
+      ]},
+      { name:"Small Talk", words:[
+        {icon:"❓", ar:"شُو اسْمَك؟", translit:"shu ismak?", en:"What's your name?"},
+        {icon:"❓", ar:"مِن وَيْن أَنْتَ؟", translit:"min wain anta?", en:"Where are you from?"},
+        {icon:"🤲", ar:"عِنْدِي", translit:"'indi", en:"I have"}
+      ]}
+    ],
+
+    exercises: [
+      {
+        id:"sp5-ex1", type:"mcq", title:"Exercise 1 — Multiple Choice",
+        instructions:"Choose the correct word or meaning.",
+        items:[
+          { promptText:"شُو اسْمَك؟ means...", options:["How are you?","What's your name?","Where are you from?"], correct:1 },
+          { promptText:"أُخْت means...", options:["Brother","Sister","Mother"], correct:1 },
+          { promptText:"عِنْدِي means...", options:["I want","I have","I go"], correct:1 },
+          { promptText:"بِنْت means...", options:["Daughter / girl","Son / boy","Mother"], correct:0 }
+        ]
+      },
+      {
+        id:"sp5-ex2", type:"matching", title:"Exercise 2 — Click to Match",
+        instructions:"Tap a word, then tap its meaning.",
+        pairs:[
+          { left:"أَب", right:"Father" },
+          { left:"أُم", right:"Mother" },
+          { left:"وَلَد", right:"Son / boy" }
+        ]
+      },
+      {
+        id:"sp5-ex3", type:"translate", title:"Exercise 3 — Translate to English",
+        instructions:"Type the English meaning of each phrase.",
+        items:[
+          { icon:"❓", ar:"مِن وَيْن أَنْتَ؟", keywords:["where","from"] },
+          { icon:"👧👧", ar:"عِنْدِي أُخْتَين", keywords:["have","two","sisters"] },
+          { icon:"👦", ar:"عِنْدِي أَخ وَاحِد", keywords:["have","one","brother"] }
+        ]
+      },
+      {
+        id:"sp5-ex4", type:"sentence", title:"Exercise 4 — Build the Phrase",
+        instructions:"Tap the word chips in the correct order.",
+        items:[
+          { words:["اسْمَك؟","شُو"], answer:["شُو","اسْمَك؟"] }
+        ]
+      },
+      {
+        id:"sp5-ex5", type:"creative", title:"Exercise 5 — Create Your Own",
+        instructions:"Open-ended — no single right answer.",
+        items:[
+          { prompt:"Introduce yourself: your name, where you're from, and how many brothers/sisters you have, using عِنْدِي." }
+        ]
+      }
+    ],
+
+    speakingPhrases: [
+      { icon:"❓", ar:"شُو اسْمَك؟", plain:"شو اسمك", translit:"shu ismak?", meaning:"\"What's your name?\"" },
+      { icon:"❓", ar:"مِن وَيْن أَنْتَ؟", plain:"من وين أنت", translit:"min wain anta?", meaning:"\"Where are you from?\"" },
+      { icon:"👧👧", ar:"عِنْدِي أُخْتَين", plain:"عندي أختين", translit:"'indi ukhtain", meaning:"\"I have two sisters\"" }
+    ]
+  },
+
+  {
+    id: 153,
+    track: "spoken",
+    unit: "s-u4",
+    label: "Checkpoint 4",
+    type: "checkpoint",
+    difficulty: 3,
+    requires: 104,
+    icon: "🔁",
+    title: "Review: Unit 4",
+    arabicTitle: "مُرَاجَعَة",
+    desc: "A cumulative check of café phrases and family/small talk from Chapters 4 and 5.",
+    locked: false,
+
+    content: [
+      { type:"p", text:"This Checkpoint completes Unit 4, mixing café ordering phrases from Chapter 4 with family and small-talk phrases from Chapter 5." }
+    ],
+    vocabCategories: [],
+    exercises: [
+      {
+        id:"spc4-ex1", type:"mcq", title:"Mixed Review",
+        instructions:"Questions pull from Chapters 4 and 5.",
+        items:[
+          { promptText:"أَبْغَى... means...", options:["I have...","I want...","I go..."], correct:1 },
+          { promptText:"بِدُون سُكَّر means...", options:["With sugar","Without sugar","No thanks"], correct:1 },
+          { promptText:"أُخْت means...", options:["Brother","Sister","Mother"], correct:1 },
+          { promptText:"عِنْدِي means...", options:["I want","I have","I go"], correct:1 }
+        ]
+      }
+    ],
+    speakingPhrases: [
+      { icon:"🙏", ar:"أَبْغَى قَهْوَة", plain:"أبغى قهوة", translit:"abgha gahwa", meaning:"\"I want coffee\"" },
+      { icon:"👧👧", ar:"عِنْدِي أُخْتَين", plain:"عندي أختين", translit:"'indi ukhtain", meaning:"\"I have two sisters\"" }
+    ]
+  },
+
+  {
+    id: 105,
+    track: "spoken",
+    unit: "s-u5",
+    label: "Chapter 6",
+    difficulty: 4,
+    requires: 153,
+    icon: "🕐",
+    title: "Telling Time & Days of the Week",
+    arabicTitle: "الوَقْت وَأَيَّام الأُسْبُوع",
+    desc: "Days of the week and simple time phrases — essential for making plans and appointments.",
+    locked: false,
+
+    content: [
+      { type:"p", text:"Days of the week and basic time phrases come up constantly — making plans, giving your availability, or setting an appointment." },
+      { type:"h", text:"Days of the Week" },
+      { type:"examples", items:[
+        { icon:"1️⃣", ar:"الأَحَد", translit:"al-ahad", meaning:"Sunday" },
+        { icon:"2️⃣", ar:"الِاثْنَين", translit:"al-ithnain", meaning:"Monday" },
+        { icon:"3️⃣", ar:"الثُّلَاثَاء", translit:"ath-thulaathaa", meaning:"Tuesday" },
+        { icon:"4️⃣", ar:"الأَرْبِعَاء", translit:"al-arbi'aa", meaning:"Wednesday" }
+      ]},
+      { type:"examples", items:[
+        { icon:"5️⃣", ar:"الخَمِيس", translit:"al-khamees", meaning:"Thursday" },
+        { icon:"6️⃣", ar:"الجُمُعَة", translit:"al-jum'a", meaning:"Friday" },
+        { icon:"7️⃣", ar:"السَّبْت", translit:"as-sabt", meaning:"Saturday" }
+      ]},
+      { type:"note", html:"Since January 2022 the UAE's official weekend has been Saturday–Sunday (with a half-day Friday) rather than the older Friday–Saturday weekend still used in some neighboring countries — so الجُمُعَة (Friday) is a regular working day for most people here." },
+      { type:"h", text:"Today, Tomorrow, Yesterday" },
+      { type:"examples", items:[
+        { icon:"📅", ar:"اليَوْم", translit:"al-yoom", meaning:"Today" },
+        { icon:"📅", ar:"بُكْرَة", translit:"bukra", meaning:"Tomorrow" },
+        { icon:"📅", ar:"أَمْس", translit:"ams", meaning:"Yesterday" }
+      ]},
+      { type:"note", html:"<strong>بُكْرَة (bukra)</strong> is the everyday Gulf/colloquial word for \"tomorrow\" — the Classical track uses غَدًا (ghadan) instead, which is understood but sounds noticeably more formal in daily conversation." },
+      { type:"h", text:"Asking About Time" },
+      { type:"examples", items:[
+        { icon:"❓", ar:"السَّاعَة كَم؟", translit:"is-saa'a cham?", meaning:"What time is it?" },
+        { icon:"📆", ar:"عِنْدِي مَوْعِد يَوْم الخَمِيس", translit:"'indi maw'id yoom al-khamees", meaning:"I have an appointment on Thursday" }
+      ]}
+    ],
+
+    vocabCategories: [
+      { name:"Days of the Week", words:[
+        {icon:"1️⃣", ar:"الأَحَد", translit:"al-ahad", en:"Sunday"},
+        {icon:"2️⃣", ar:"الِاثْنَين", translit:"al-ithnain", en:"Monday"},
+        {icon:"3️⃣", ar:"الثُّلَاثَاء", translit:"ath-thulaathaa", en:"Tuesday"},
+        {icon:"4️⃣", ar:"الأَرْبِعَاء", translit:"al-arbi'aa", en:"Wednesday"},
+        {icon:"5️⃣", ar:"الخَمِيس", translit:"al-khamees", en:"Thursday"},
+        {icon:"6️⃣", ar:"الجُمُعَة", translit:"al-jum'a", en:"Friday"},
+        {icon:"7️⃣", ar:"السَّبْت", translit:"as-sabt", en:"Saturday"}
+      ]},
+      { name:"Talking About Time", words:[
+        {icon:"📅", ar:"اليَوْم", translit:"al-yoom", en:"Today"},
+        {icon:"📅", ar:"بُكْرَة", translit:"bukra", en:"Tomorrow"},
+        {icon:"📅", ar:"أَمْس", translit:"ams", en:"Yesterday"},
+        {icon:"❓", ar:"السَّاعَة كَم؟", translit:"is-saa'a cham?", en:"What time is it?"}
+      ]}
+    ],
+
+    exercises: [
+      {
+        id:"sp6-ex1", type:"mcq", title:"Exercise 1 — Multiple Choice",
+        instructions:"Choose the correct day or meaning.",
+        items:[
+          { promptText:"What day is الخَمِيس؟", options:["Wednesday","Thursday","Friday"], correct:1 },
+          { promptText:"بُكْرَة means...", options:["Yesterday","Today","Tomorrow"], correct:2 },
+          { promptText:"السَّاعَة كَم؟ means...", options:["What day is it?","What time is it?","Where is it?"], correct:1 },
+          { promptText:"Since 2022, the UAE's official weekend is...", options:["Friday–Saturday","Saturday–Sunday","Thursday–Friday"], correct:1 }
+        ]
+      },
+      {
+        id:"sp6-ex2", type:"matching", title:"Exercise 2 — Click to Match",
+        instructions:"Tap a day or word, then tap its meaning.",
+        pairs:[
+          { left:"الأَحَد", right:"Sunday" },
+          { left:"الجُمُعَة", right:"Friday" },
+          { left:"أَمْس", right:"Yesterday" }
+        ]
+      },
+      {
+        id:"sp6-ex3", type:"translate", title:"Exercise 3 — Translate to English",
+        instructions:"Type the English meaning of each phrase.",
+        items:[
+          { icon:"📆", ar:"عِنْدِي مَوْعِد يَوْم الخَمِيس", keywords:["appointment","thursday"] },
+          { icon:"📅", ar:"بُكْرَة", keywords:["tomorrow"] },
+          { icon:"❓", ar:"السَّاعَة كَم؟", keywords:["what","time"] }
+        ]
+      },
+      {
+        id:"sp6-ex4", type:"sentence", title:"Exercise 4 — Build the Phrase",
+        instructions:"Tap the word chips in the correct order.",
+        items:[
+          { words:["كَم","السَّاعَة"], answer:["السَّاعَة","كَم"] }
+        ]
+      },
+      {
+        id:"sp6-ex5", type:"creative", title:"Exercise 5 — Create Your Own",
+        instructions:"Open-ended — no single right answer.",
+        items:[
+          { prompt:"Write out all seven days of the week in order, then say which day is your favorite." },
+          { prompt:"Write a short sentence saying you have an appointment (مَوْعِد) on a day of your choice." }
+        ]
+      }
+    ],
+
+    speakingPhrases: [
+      { icon:"❓", ar:"السَّاعَة كَم؟", plain:"الساعة كم", translit:"is-saa'a cham?", meaning:"\"What time is it?\"" },
+      { icon:"📅", ar:"بُكْرَة إِن شَاء الله", plain:"بكرة إن شاء الله", translit:"bukra in shaa' allah", meaning:"\"Tomorrow, God willing\"" },
+      { icon:"📆", ar:"عِنْدِي مَوْعِد يَوْم الخَمِيس", plain:"عندي موعد يوم الخميس", translit:"'indi maw'id yoom al-khamees", meaning:"\"I have an appointment on Thursday\"" }
+    ]
+  },
+
+  {
+    id: 154,
+    track: "spoken",
+    unit: "s-u5",
+    label: "Checkpoint 5",
+    type: "checkpoint",
+    difficulty: 4,
+    requires: 105,
+    icon: "🔁",
+    title: "Review: Unit 5",
+    arabicTitle: "مُرَاجَعَة",
+    desc: "A cumulative check of days of the week and time phrases from Chapter 6.",
+    locked: false,
+
+    content: [
+      { type:"p", text:"This Checkpoint completes Unit 5, reviewing the days of the week and everyday time phrases from Chapter 6." }
+    ],
+    vocabCategories: [],
+    exercises: [
+      {
+        id:"spc5-ex1", type:"mcq", title:"Mixed Review",
+        instructions:"Questions pull from Chapter 6.",
+        items:[
+          { promptText:"What day is الخَمِيس؟", options:["Wednesday","Thursday","Friday"], correct:1 },
+          { promptText:"بُكْرَة means...", options:["Yesterday","Today","Tomorrow"], correct:2 },
+          { promptText:"السَّاعَة كَم؟ means...", options:["What day is it?","What time is it?","Where is it?"], correct:1 },
+          { promptText:"أَمْس means...", options:["Tomorrow","Today","Yesterday"], correct:2 }
+        ]
+      }
+    ],
+    speakingPhrases: [
+      { icon:"❓", ar:"السَّاعَة كَم؟", plain:"الساعة كم", translit:"is-saa'a cham?", meaning:"\"What time is it?\"" },
+      { icon:"📅", ar:"بُكْرَة إِن شَاء الله", plain:"بكرة إن شاء الله", translit:"bukra in shaa' allah", meaning:"\"Tomorrow, God willing\"" }
+    ]
+  },
+
+  {
+    id: 106,
+    track: "spoken",
+    unit: "s-u6",
+    label: "Chapter 7",
+    difficulty: 4,
+    requires: 154,
+    icon: "🚕",
+    title: "Taking a Taxi",
+    arabicTitle: "فِي التَّكْسِي",
+    desc: "A handful of phrases that cover almost every taxi ride.",
+    locked: false,
+
+    content: [
+      { type:"p", text:"Taxis are one of the most common ways to get around, and a small set of phrases handles almost every ride from start to finish." },
+      { type:"h", text:"Starting the Ride" },
+      { type:"examples", items:[
+        { icon:"📍", ar:"وَدِّني إِلَى...", translit:"waddini ilaa...", meaning:"Take me to..." },
+        { icon:"📍", ar:"هَذَا العُنْوَان", translit:"hadha al-'unwaan", meaning:"This address" }
+      ]},
+      { type:"h", text:"During the Ride" },
+      { type:"examples", items:[
+        { icon:"🏎️", ar:"بِسُرْعَة", translit:"bisur'a", meaning:"Quickly" },
+        { icon:"🐢", ar:"شِوَي شِوَي", translit:"shway shway", meaning:"Slowly / take it easy" },
+        { icon:"🛑", ar:"وَقِّف هِني", translit:"waggif hini", meaning:"Stop here" }
+      ]},
+      { type:"h", text:"Paying" },
+      { type:"examples", items:[
+        { icon:"❓", ar:"كَم الأُجْرَة؟", translit:"cham al-ujra?", meaning:"How much is the fare?" },
+        { icon:"💰", ar:"خَلِّي البَاقِي", translit:"khalli al-baagi", meaning:"Keep the change" }
+      ]},
+      { type:"note", html:"Licensed taxis across the UAE run on a meter, so كَم الأُجْرَة؟ is usually just conversation-starter small talk rather than haggling — unlike the souk phrases from Chapter 2." }
+    ],
+
+    vocabCategories: [
+      { name:"Starting the Ride", words:[
+        {icon:"📍", ar:"وَدِّني إِلَى...", translit:"waddini ilaa...", en:"Take me to..."},
+        {icon:"📍", ar:"العُنْوَان", translit:"al-'unwaan", en:"The address"}
+      ]},
+      { name:"During the Ride", words:[
+        {icon:"🏎️", ar:"بِسُرْعَة", translit:"bisur'a", en:"Quickly"},
+        {icon:"🐢", ar:"شِوَي شِوَي", translit:"shway shway", en:"Slowly / take it easy"},
+        {icon:"🛑", ar:"وَقِّف هِني", translit:"waggif hini", en:"Stop here"}
+      ]},
+      { name:"Paying", words:[
+        {icon:"❓", ar:"كَم الأُجْرَة؟", translit:"cham al-ujra?", en:"How much is the fare?"},
+        {icon:"💰", ar:"خَلِّي البَاقِي", translit:"khalli al-baagi", en:"Keep the change"}
+      ]}
+    ],
+
+    exercises: [
+      {
+        id:"sp7-ex1", type:"mcq", title:"Exercise 1 — Multiple Choice",
+        instructions:"Choose the correct word or meaning.",
+        items:[
+          { promptText:"وَدِّني إِلَى... means...", options:["Take me to...","Wait for me","Stop here"], correct:0 },
+          { promptText:"How do you say \"quickly\"?", options:["شِوَي شِوَي","بِسُرْعَة","وَقِّف"], correct:1 },
+          { promptText:"كَم الأُجْرَة؟ asks...", options:["Where to?","How much is the fare?","How far is it?"], correct:1 },
+          { promptText:"خَلِّي البَاقِي means...", options:["Give me change","Keep the change","No change"], correct:1 }
+        ]
+      },
+      {
+        id:"sp7-ex2", type:"matching", title:"Exercise 2 — Click to Match",
+        instructions:"Tap a phrase, then tap its meaning.",
+        pairs:[
+          { left:"شِوَي شِوَي", right:"Slowly / take it easy" },
+          { left:"وَقِّف هِني", right:"Stop here" },
+          { left:"العُنْوَان", right:"The address" }
+        ]
+      },
+      {
+        id:"sp7-ex3", type:"translate", title:"Exercise 3 — Translate to English",
+        instructions:"Type the English meaning of each phrase.",
+        items:[
+          { icon:"🛑", ar:"وَقِّف هِني", keywords:["stop","here"] },
+          { icon:"❓", ar:"كَم الأُجْرَة؟", keywords:["how much","fare"] },
+          { icon:"💰", ar:"خَلِّي البَاقِي", keywords:["keep","change"] }
+        ]
+      },
+      {
+        id:"sp7-ex4", type:"sentence", title:"Exercise 4 — Build the Phrase",
+        instructions:"Tap the word chips in the correct order.",
+        items:[
+          { words:["هِني","وَقِّف"], answer:["وَقِّف","هِني"] }
+        ]
+      },
+      {
+        id:"sp7-ex5", type:"creative", title:"Exercise 5 — Create Your Own",
+        instructions:"Open-ended — no single right answer.",
+        items:[
+          { prompt:"Write a short taxi exchange: tell the driver where to go, ask them to slow down, then ask the fare." }
+        ]
+      }
+    ],
+
+    speakingPhrases: [
+      { icon:"📍", ar:"وَدِّني إِلَى المَطَار", plain:"وّدني إلى المطار", translit:"waddini ilaa al-mataar", meaning:"\"Take me to the airport\"" },
+      { icon:"🛑", ar:"وَقِّف هِني، لَو سَمَحْت", plain:"وقّف هني لو سمحت", translit:"waggif hini, law samaht", meaning:"\"Stop here, please\"" },
+      { icon:"❓", ar:"كَم الأُجْرَة؟", plain:"كم الأجرة", translit:"cham al-ujra?", meaning:"\"How much is the fare?\"" }
+    ]
+  },
+
+  {
+    id: 107,
+    track: "spoken",
+    unit: "s-u6",
+    label: "Chapter 8",
+    difficulty: 5,
+    requires: 106,
+    icon: "🚨",
+    title: "Emergencies & Asking for Help",
+    arabicTitle: "الطَّوَارِئ وَطَلَب المُسَاعَدَة",
+    desc: "Important safety phrases everyone should know, even at a basic level.",
+    locked: false,
+
+    content: [
+      { type:"p", text:"These phrases matter more than almost anything else in this course — even a beginner should know how to ask for help." },
+      { type:"h", text:"Asking for Help" },
+      { type:"examples", items:[
+        { icon:"🆘", ar:"سَاعِدْني!", translit:"saa'idni!", meaning:"Help me!" },
+        { icon:"🧭", ar:"أَنَا تَائِه", translit:"ana taayih", meaning:"I'm lost" }
+      ]},
+      { type:"h", text:"Emergency Words" },
+      { type:"examples", items:[
+        { icon:"👮", ar:"شُرْطَة", translit:"shurta", meaning:"Police" },
+        { icon:"🚑", ar:"إِسْعَاف", translit:"is'aaf", meaning:"Ambulance" },
+        { icon:"🏥", ar:"مُسْتَشْفَى", translit:"mustashfa", meaning:"Hospital" }
+      ]},
+      { type:"h", text:"Emergency Numbers in the UAE" },
+      { type:"examples", items:[
+        { icon:"👮", ar:"٩٩٩", translit:"999", meaning:"Police" },
+        { icon:"🚑", ar:"٩٩٨", translit:"998", meaning:"Ambulance" },
+        { icon:"🚒", ar:"٩٩٧", translit:"997", meaning:"Fire (Civil Defence)" }
+      ]},
+      { type:"note", html:"These three numbers work free of charge from any phone anywhere in the UAE, even with no credit or SIM. 999 is the general line — the operator will transfer you to the right service if you're not sure which one you need." }
+    ],
+
+    vocabCategories: [
+      { name:"Asking for Help", words:[
+        {icon:"🆘", ar:"سَاعِدْني!", translit:"saa'idni!", en:"Help me!"},
+        {icon:"🧭", ar:"أَنَا تَائِه", translit:"ana taayih", en:"I'm lost"}
+      ]},
+      { name:"Emergency Services", words:[
+        {icon:"👮", ar:"شُرْطَة", translit:"shurta", en:"Police"},
+        {icon:"🚑", ar:"إِسْعَاف", translit:"is'aaf", en:"Ambulance"},
+        {icon:"🏥", ar:"مُسْتَشْفَى", translit:"mustashfa", en:"Hospital"}
+      ]},
+      { name:"Emergency Numbers (UAE)", words:[
+        {icon:"👮", ar:"٩٩٩", translit:"999", en:"Police"},
+        {icon:"🚑", ar:"٩٩٨", translit:"998", en:"Ambulance"},
+        {icon:"🚒", ar:"٩٩٧", translit:"997", en:"Fire (Civil Defence)"}
+      ]}
+    ],
+
+    exercises: [
+      {
+        id:"sp8-ex1", type:"mcq", title:"Exercise 1 — Multiple Choice",
+        instructions:"Choose the correct word or number.",
+        items:[
+          { promptText:"سَاعِدْني! means...", options:["Wait!","Help me!","Look out!"], correct:1 },
+          { promptText:"أَنَا تَائِه means...", options:["I'm hungry","I'm lost","I'm late"], correct:1 },
+          { promptText:"The UAE's ambulance number is...", options:["999","998","997"], correct:1 },
+          { promptText:"شُرْطَة means...", options:["Hospital","Fire","Police"], correct:2 }
+        ]
+      },
+      {
+        id:"sp8-ex2", type:"matching", title:"Exercise 2 — Click to Match",
+        instructions:"Tap a word, then tap its meaning.",
+        pairs:[
+          { left:"إِسْعَاف", right:"Ambulance" },
+          { left:"مُسْتَشْفَى", right:"Hospital" },
+          { left:"٩٩٩", right:"Police" }
+        ]
+      },
+      {
+        id:"sp8-ex3", type:"translate", title:"Exercise 3 — Translate to English",
+        instructions:"Type the English meaning of each phrase.",
+        items:[
+          { icon:"🆘", ar:"سَاعِدْني!", keywords:["help"] },
+          { icon:"🧭", ar:"أَنَا تَائِه", keywords:["lost"] },
+          { icon:"🚨", ar:"اتَّصِل بِالشُّرْطَة", keywords:["call","police"] }
+        ]
+      },
+      {
+        id:"sp8-ex4", type:"sentence", title:"Exercise 4 — Build the Phrase",
+        instructions:"Tap the word chips in the correct order.",
+        items:[
+          { words:["تَائِه","أَنَا"], answer:["أَنَا","تَائِه"] }
+        ]
+      },
+      {
+        id:"sp8-ex5", type:"creative", title:"Exercise 5 — Create Your Own",
+        instructions:"Open-ended — no single right answer.",
+        items:[
+          { prompt:"Memorize the three emergency numbers (999/998/997) and write a sentence saying you need each service." }
+        ]
+      }
+    ],
+
+    speakingPhrases: [
+      { icon:"🆘", ar:"سَاعِدْني!", plain:"ساعدني", translit:"saa'idni!", meaning:"\"Help me!\"" },
+      { icon:"🧭", ar:"أَنَا تَائِه", plain:"أنا تايه", translit:"ana taayih", meaning:"\"I'm lost\"" },
+      { icon:"🚨", ar:"اتَّصِل بِالشُّرْطَة!", plain:"اتصل بالشرطة", translit:"ittasil bish-shurta!", meaning:"\"Call the police!\"" }
+    ]
+  },
+
+  {
+    id: 155,
+    track: "spoken",
+    unit: "s-u6",
+    label: "Checkpoint 6",
+    type: "checkpoint",
+    difficulty: 5,
+    requires: 107,
+    icon: "🔁",
+    title: "Review: Unit 6",
+    arabicTitle: "مُرَاجَعَة",
+    desc: "A cumulative check of taxi and emergency phrases from Chapters 7 and 8.",
+    locked: false,
+
+    content: [
+      { type:"p", text:"This Checkpoint completes Unit 6, mixing taxi phrases from Chapter 7 with the essential emergency phrases from Chapter 8." }
+    ],
+    vocabCategories: [],
+    exercises: [
+      {
+        id:"spc6-ex1", type:"mcq", title:"Mixed Review",
+        instructions:"Questions pull from Chapters 7 and 8.",
+        items:[
+          { promptText:"كَم الأُجْرَة؟ means...", options:["Where to?","How much is the fare?","Stop here"], correct:1 },
+          { promptText:"وَقِّف هِني means...", options:["Go faster","Stop here","Turn left"], correct:1 },
+          { promptText:"سَاعِدْني! means...", options:["Wait!","Help me!","Look out!"], correct:1 },
+          { promptText:"The UAE's police number is...", options:["999","998","997"], correct:0 }
+        ]
+      }
+    ],
+    speakingPhrases: [
+      { icon:"❓", ar:"كَم الأُجْرَة؟", plain:"كم الأجرة", translit:"cham al-ujra?", meaning:"\"How much is the fare?\"" },
+      { icon:"🆘", ar:"سَاعِدْني!", plain:"ساعدني", translit:"saa'idni!", meaning:"\"Help me!\"" }
+    ]
+  },
+
+  {
+    id: 108,
+    track: "spoken",
+    unit: "s-u7",
+    label: "Chapter 9",
+    difficulty: 5,
+    requires: 155,
+    icon: "💼",
+    title: "Talking About Work",
+    arabicTitle: "الحَدِيث عَن الشُّغُل",
+    desc: "Talk about your job, where you work, and ask others about theirs — common small talk in the Gulf.",
+    locked: false,
+
+    content: [
+      { type:"p", text:"After names and family, work is one of the first things people ask about. This chapter covers the basics of talking about your job." },
+      { type:"h", text:"Asking About Work" },
+      { type:"examples", items:[
+        { icon:"❓", ar:"شُو شُغْلَك؟", translit:"shu shughlak?", meaning:"What's your job?" },
+        { icon:"❓", ar:"وِيْن تِشْتَغِل؟", translit:"wain tishtaghil?", meaning:"Where do you work?" }
+      ]},
+      { type:"h", text:"Answering" },
+      { type:"examples", items:[
+        { icon:"💼", ar:"أَنَا مُهَنْدِس", translit:"ana muhandis", meaning:"I'm an engineer" },
+        { icon:"🏢", ar:"أَشْتَغِل فِي أَبُوظَبِي", translit:"ashtaghil fi Abu Dhabi", meaning:"I work in Abu Dhabi" }
+      ]},
+      { type:"h", text:"Workplace Words" },
+      { type:"examples", items:[
+        { icon:"🏢", ar:"مَكْتَب", translit:"maktab", meaning:"office" },
+        { icon:"🏬", ar:"شَرِكَة", translit:"sharika", meaning:"company" },
+        { icon:"👔", ar:"مُدِير", translit:"mudeer", meaning:"manager / boss" },
+        { icon:"🤝", ar:"زَمِيل", translit:"zameel", meaning:"colleague" },
+        { icon:"💰", ar:"رَاتِب", translit:"raatib", meaning:"salary" }
+      ]},
+      { type:"note", html:"<strong>أَشْتَغِل (ashtaghil)</strong> is the everyday Gulf word for \"I work.\" You'll also hear <strong>شُغُل (shughul)</strong> used as a general noun for \"work\" or \"job\" — as in شُو شُغْلَك؟, literally \"what's your work?\"" }
+    ],
+
+    vocabCategories: [
+      { name:"Asking About Work", words:[
+        {icon:"❓", ar:"شُو شُغْلَك؟", translit:"shu shughlak?", en:"What's your job?"},
+        {icon:"❓", ar:"وِيْن تِشْتَغِل؟", translit:"wain tishtaghil?", en:"Where do you work?"}
+      ]},
+      { name:"Jobs & Workplace", words:[
+        {icon:"💼", ar:"مُهَنْدِس", translit:"muhandis", en:"Engineer"},
+        {icon:"🏢", ar:"مَكْتَب", translit:"maktab", en:"Office"},
+        {icon:"🏬", ar:"شَرِكَة", translit:"sharika", en:"Company"},
+        {icon:"👔", ar:"مُدِير", translit:"mudeer", en:"Manager / boss"},
+        {icon:"🤝", ar:"زَمِيل", translit:"zameel", en:"Colleague"},
+        {icon:"💰", ar:"رَاتِب", translit:"raatib", en:"Salary"}
+      ]}
+    ],
+
+    exercises: [
+      {
+        id:"sp9-ex1", type:"mcq", title:"Exercise 1 — Multiple Choice",
+        instructions:"Choose the correct word or meaning.",
+        items:[
+          { promptText:"شُو شُغْلَك؟ means...", options:["Where do you work?","What's your job?","How old are you?"], correct:1 },
+          { promptText:"مَكْتَب means...", options:["Company","Office","Salary"], correct:1 },
+          { promptText:"زَمِيل means...", options:["Manager","Colleague","Boss"], correct:1 },
+          { promptText:"أَشْتَغِل means...", options:["I go","I work","I have"], correct:1 }
+        ]
+      },
+      {
+        id:"sp9-ex2", type:"matching", title:"Exercise 2 — Click to Match",
+        instructions:"Tap a word, then tap its meaning.",
+        pairs:[
+          { left:"مُدِير", right:"Manager / boss" },
+          { left:"شَرِكَة", right:"Company" },
+          { left:"رَاتِب", right:"Salary" }
+        ]
+      },
+      {
+        id:"sp9-ex3", type:"translate", title:"Exercise 3 — Translate to English",
+        instructions:"Type the English meaning of each phrase.",
+        items:[
+          { icon:"❓", ar:"وِيْن تِشْتَغِل؟", keywords:["where","work"] },
+          { icon:"💼", ar:"أَنَا مُهَنْدِس", keywords:["engineer"] },
+          { icon:"🏢", ar:"أَشْتَغِل فِي أَبُوظَبِي", keywords:["work","abu dhabi"] }
+        ]
+      },
+      {
+        id:"sp9-ex4", type:"sentence", title:"Exercise 4 — Build the Phrase",
+        instructions:"Tap the word chips in the correct order.",
+        items:[
+          { words:["فِي أَبُوظَبِي","أَشْتَغِل"], answer:["أَشْتَغِل","فِي أَبُوظَبِي"] }
+        ]
+      },
+      {
+        id:"sp9-ex5", type:"creative", title:"Exercise 5 — Create Your Own",
+        instructions:"Open-ended — no single right answer.",
+        items:[
+          { prompt:"Introduce your job: say what you do and where you work, using شُو شُغْلَك-style phrasing." }
+        ]
+      }
+    ],
+
+    speakingPhrases: [
+      { icon:"❓", ar:"شُو شُغْلَك؟", plain:"شو شغلك", translit:"shu shughlak?", meaning:"\"What's your job?\"" },
+      { icon:"🏢", ar:"أَشْتَغِل فِي أَبُوظَبِي", plain:"أشتغل في أبوظبي", translit:"ashtaghil fi Abu Dhabi", meaning:"\"I work in Abu Dhabi\"" }
+    ]
+  },
+
+  {
+    id: 109,
+    track: "spoken",
+    unit: "s-u7",
+    label: "Chapter 10",
+    difficulty: 6,
+    requires: 108,
+    icon: "🏠",
+    title: "Around the House",
+    arabicTitle: "فِي البَيْت",
+    desc: "Rooms and everyday phrases for talking about home life.",
+    locked: false,
+
+    content: [
+      { type:"p", text:"Whether you're inviting someone over or just talking about your day, these are the words and phrases you'll use most at home." },
+      { type:"h", text:"Rooms of the House" },
+      { type:"examples", items:[
+        { icon:"🏠", ar:"بَيْت", translit:"bayt", meaning:"house" },
+        { icon:"🛋️", ar:"صَالَة", translit:"saala", meaning:"living room" },
+        { icon:"🍳", ar:"مَطْبَخ", translit:"matbakh", meaning:"kitchen" },
+        { icon:"🛏️", ar:"غُرْفَة نَوْم", translit:"ghurfat nawm", meaning:"bedroom" },
+        { icon:"🚿", ar:"حَمَّام", translit:"hammaam", meaning:"bathroom" }
+      ]},
+      { type:"h", text:"Everyday Home Phrases" },
+      { type:"examples", items:[
+        { icon:"🏠", ar:"أَنَا فِي البَيْت", translit:"ana fil-bayt", meaning:"I'm at home" },
+        { icon:"🤗", ar:"تَعَال البَيْت", translit:"ta'aal al-bayt", meaning:"Come over" },
+        { icon:"🧹", ar:"أَسَوِّي شُغُل بِالبَيْت", translit:"asawwi shughul bil-bayt", meaning:"I'm doing stuff around the house" }
+      ]},
+      { type:"note", html:"<strong>تَعَال (ta'aal)</strong> is a very common, friendly way to say \"come\" — you'll hear it used constantly when inviting someone somewhere, far more than a fully conjugated verb. And أَسَوِّي (asawwi, \"I do/make\") is one of the most useful all-purpose verbs in Gulf Arabic." }
+    ],
+
+    vocabCategories: [
+      { name:"Rooms", words:[
+        {icon:"🏠", ar:"بَيْت", translit:"bayt", en:"House"},
+        {icon:"🛋️", ar:"صَالَة", translit:"saala", en:"Living room"},
+        {icon:"🍳", ar:"مَطْبَخ", translit:"matbakh", en:"Kitchen"},
+        {icon:"🛏️", ar:"غُرْفَة نَوْم", translit:"ghurfat nawm", en:"Bedroom"},
+        {icon:"🚿", ar:"حَمَّام", translit:"hammaam", en:"Bathroom"}
+      ]},
+      { name:"Home Phrases", words:[
+        {icon:"🏠", ar:"أَنَا فِي البَيْت", translit:"ana fil-bayt", en:"I'm at home"},
+        {icon:"🤗", ar:"تَعَال البَيْت", translit:"ta'aal al-bayt", en:"Come over"},
+        {icon:"🧹", ar:"شُغُل", translit:"shughul", en:"Work / stuff to do"}
+      ]}
+    ],
+
+    exercises: [
+      {
+        id:"sp10-ex1", type:"mcq", title:"Exercise 1 — Multiple Choice",
+        instructions:"Choose the correct word or meaning.",
+        items:[
+          { promptText:"مَطْبَخ means...", options:["Bedroom","Kitchen","Bathroom"], correct:1 },
+          { promptText:"صَالَة means...", options:["Living room","Bathroom","House"], correct:0 },
+          { promptText:"تَعَال means...", options:["Go","Come","Sit"], correct:1 },
+          { promptText:"أَنَا فِي البَيْت means...", options:["I'm going home","I'm at home","I'm leaving home"], correct:1 }
+        ]
+      },
+      {
+        id:"sp10-ex2", type:"matching", title:"Exercise 2 — Click to Match",
+        instructions:"Tap a word, then tap its meaning.",
+        pairs:[
+          { left:"بَيْت", right:"House" },
+          { left:"حَمَّام", right:"Bathroom" },
+          { left:"غُرْفَة نَوْم", right:"Bedroom" }
+        ]
+      },
+      {
+        id:"sp10-ex3", type:"translate", title:"Exercise 3 — Translate to English",
+        instructions:"Type the English meaning of each phrase.",
+        items:[
+          { icon:"🏠", ar:"أَنَا فِي البَيْت", keywords:["home"] },
+          { icon:"🤗", ar:"تَعَال البَيْت", keywords:["come"] },
+          { icon:"🧹", ar:"أَسَوِّي شُغُل بِالبَيْت", keywords:["doing","stuff","home"] }
+        ]
+      },
+      {
+        id:"sp10-ex4", type:"sentence", title:"Exercise 4 — Build the Phrase",
+        instructions:"Tap the word chips in the correct order.",
+        items:[
+          { words:["البَيْت","فِي","أَنَا"], answer:["أَنَا","فِي","البَيْت"] }
+        ]
+      },
+      {
+        id:"sp10-ex5", type:"creative", title:"Exercise 5 — Create Your Own",
+        instructions:"Open-ended — no single right answer.",
+        items:[
+          { prompt:"Describe your house: name three rooms in Arabic and say which one is your favorite." }
+        ]
+      }
+    ],
+
+    speakingPhrases: [
+      { icon:"🤗", ar:"تَعَال البَيْت", plain:"تعال البيت", translit:"ta'aal al-bayt", meaning:"\"Come over\"" },
+      { icon:"🏠", ar:"أَنَا فِي البَيْت", plain:"أنا في البيت", translit:"ana fil-bayt", meaning:"\"I'm at home\"" }
+    ]
+  },
+
+  {
+    id: 110,
+    track: "spoken",
+    unit: "s-u7",
+    label: "Checkpoint 7",
+    type: "checkpoint",
+    difficulty: 6,
+    requires: 109,
+    icon: "🔁",
+    title: "Review: Unit 7",
+    arabicTitle: "مُرَاجَعَة",
+    desc: "A cumulative check of work and home phrases, mixed with earlier spoken chapters.",
+    locked: false,
+
+    content: [
+      { type:"p", text:"This Checkpoint completes Unit 7, mixing work and home vocabulary with everyday phrases from earlier chapters — greetings, family, and small talk." }
+    ],
+    vocabCategories: [],
+    exercises: [
+      {
+        id:"spc7-ex1", type:"mcq", title:"Mixed Review",
+        instructions:"Questions pull from Chapters 9 and 10, plus earlier vocabulary.",
+        items:[
+          { promptText:"شُو شُغْلَك؟ means...", options:["What's your name?","What's your job?","Where are you from?"], correct:1 },
+          { promptText:"مَطْبَخ means...", options:["Kitchen","Office","Bedroom"], correct:0 },
+          { icon:"❓", promptText:"شُو اسْمَك؟ means...", options:["What's your name?","What's your job?","How are you?"], correct:0 },
+          { promptText:"تَعَال means...", options:["Sit","Come","Leave"], correct:1 }
+        ]
+      }
+    ],
+    speakingPhrases: [
+      { icon:"🏢", ar:"أَشْتَغِل فِي أَبُوظَبِي", plain:"أشتغل في أبوظبي", translit:"ashtaghil fi Abu Dhabi", meaning:"\"I work in Abu Dhabi\"" },
+      { icon:"🏠", ar:"أَنَا فِي البَيْت", plain:"أنا في البيت", translit:"ana fil-bayt", meaning:"\"I'm at home\"" }
+    ]
+  },
+
+  {
+    id: 111,
+    track: "spoken",
+    unit: "s-u8",
+    label: "Chapter 11",
+    difficulty: 7,
+    requires: 110,
+    icon: "🚧",
+    title: "More Phrases — Coming Soon",
+    arabicTitle: "قَرِيبًا",
+    desc: "The next chapter is being written — shopping negotiations, health, and more everyday Gulf Arabic are on the way.",
+    locked: true
   }
 ];
 
@@ -2463,10 +5057,10 @@ function renderDashboard() {
       <p>Tap a chapter to start. New chapters unlock as the course grows.</p>
     </div>
     <div class="free-banner">
-      <div class="fb-line1">🌱 This app is free to use, and will stay free for as long as we can sustain the cost of running it.</div>
+      <div class="fb-line1">🌱 This app is free to use.</div>
       <div class="fb-verse arabic">رَبِّ زِدْنِي عِلْمًا</div>
       <div class="fb-verse-en">"My Lord, increase me in knowledge" — Qur'an, Surah Ta-Ha 20:114</div>
-      <div class="fb-line2">Learning and sharing knowledge is its own reward — that's the spirit this project is built in. This project is for personal, non-commercial learning use only — please don't republish, resell, or redistribute it elsewhere.</div>
+      <div class="fb-line2">Learning and sharing knowledge is its own reward — that's the spirit this project is built in. This started as my own self-learning project, and I'll keep adding chapters along the way. There are no copyrights on it — copy it, republish it, or share it however you like.</div>
       <div style="margin-top:8px;"><a style="color:#5b3fa6;cursor:pointer;font-size:13px;" onclick="renderVoiceSetupScreen()">🔊 Voice Setup Tips — improve pronunciation audio quality</a></div>
     </div>
     <div class="track-banner">
