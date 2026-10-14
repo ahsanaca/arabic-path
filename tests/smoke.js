@@ -24,7 +24,7 @@ const URL = process.env.APP_URL || 'http://localhost:8765/index.html';
 
   const ids = await page.evaluate(() => chapters.filter(c => !c.locked).map(c => ({ id: c.id, track: c.track || 'classical' })));
   let tabsChecked = 0, exChecked = 0;
-  for (const track of ['classical', 'spoken']) {
+  for (const track of ['classical', 'spoken', 'kids']) {
     await page.evaluate(t => selectTrack(t), track);
     for (const { id } of ids.filter(x => x.track === track)) {
       await page.evaluate(i => openChapter(i), id);
